@@ -538,6 +538,7 @@ video {
   justify-content: center;
   position: absolute;
   z-index: 1;
+  cursor: pointer;
   top: 50%
 }
 .swiper-arrow svg {
@@ -1572,7 +1573,6 @@ button.swiper-pagination-bullet {
     top: 7.8125rem;
     left: 0;
     right: 0;
-    bottom: 0;
     min-height: calc(100vh - 7.8125rem);
     background-color: #fff;
     overflow-y: auto;
