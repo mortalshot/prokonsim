@@ -1022,7 +1022,7 @@ video {
   transition: .3s opacity;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  z-index: 10
+  z-index: 1
 }
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0
@@ -1573,7 +1573,7 @@ button.swiper-pagination-bullet {
     left: 0;
     right: 0;
     bottom: 0;
-    min-height: 100vh;
+    min-height: calc(100vh - 7.8125rem);
     background-color: #fff;
     overflow-y: auto;
     overflow-x: hidden;
