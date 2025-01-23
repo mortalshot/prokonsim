@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="main-slider">
+					<div class="main-slider__container">
+						<div class="main-slider__slider swiper">
+							<div class="swiper-arrow swiper-arrow_prev">
+								<svg class="icon">
+									<use xlink:href="@img/icons/icons.svg#arrow"></use>
+								</svg>
+							</div>
+
+							<div class="main-slider__wrapper swiper-wrapper">
+								<div class="main-slider__slide swiper-slide">
+									<div class="main-slider__bg">
+										<img src="@img/main-slider/main-slider-slide1-bg.jpg" alt="" loading="lazy">
+									</div>
+									<div class="main-slider__scheme">
+										<div class="main-slider__body">
+											<div class="main-slider__tag">
+												<img src="@img/main-slider/main-slider-slide1-icon.svg" alt="" loading="lazy">
+												<span>Более 20 000 товаров в наличии</span>
+											</div>
+
+											<h1 class="main-slider__title">Трубопроводная арматура для&nbsp;водоснабжения, теплоснабжения и канализации</h1>
+
+											<div class="main-slider__button">
+												<a href="" class="btn btn_bg-primary1">
+													<span>Перейти в каталог</span>
+													<svg class="icon icon_chevron">
+														<use xlink:href="@img/icons/icons.svg#chevron"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="main-slider__image">
+											<img src="@img/main-slider/main-slider-slide1-image.png" alt="" loading="lazy">
+										</div>
+									</div>
+								</div>
+
+								<div class="main-slider__slide swiper-slide">
+									<div class="main-slider__bg">
+										<img src="@img/main-slider/main-slider-slide1-bg.jpg" alt="" loading="lazy">
+									</div>
+									<div class="main-slider__scheme">
+										<div class="main-slider__body">
+											<div class="main-slider__tag">
+												<img src="@img/main-slider/main-slider-slide1-icon.svg" alt="" loading="lazy">
+												<span>Более 20 000 товаров в наличии</span>
+											</div>
+
+											<h1 class="main-slider__title">Трубопроводная арматура для&nbsp;водоснабжения, теплоснабжения и канализации</h1>
+
+											<div class="main-slider__button">
+												<a href="" class="btn btn_bg-primary1">
+													<span>Перейти в каталог</span>
+													<svg class="icon icon_chevron">
+														<use xlink:href="@img/icons/icons.svg#chevron"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+										<div class="main-slider__image">
+											<img src="@img/main-slider/main-slider-slide1-image.png" alt="" loading="lazy">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-arrow swiper-arrow_next">
+								<svg class="icon">
+									<use xlink:href="@img/icons/icons.svg#arrow"></use>
+								</svg>
+							</div>
+
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
