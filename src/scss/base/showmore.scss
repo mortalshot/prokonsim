@@ -1,14 +1,28 @@
 [data-showmore] {
 }
+
 [data-showmore-content] {
 }
+
 [data-showmore-button] {
+	&:not([hidden]) {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: toRem(30);
+	}
+
+	.btn {
+		display: inline-flex;
+		min-height: toRem(48);
+	}
+
 	span {
 		&:last-child {
 			display: none;
 		}
 		._showmore-active & {
 			display: none;
+
 			&:last-child {
 				display: block;
 			}

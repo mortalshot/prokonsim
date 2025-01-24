@@ -18,7 +18,7 @@
 	&_bg-primary1 {
 		background-color: $Primary1;
 		color: $White;
-		
+
 		@media (any-hover: hover) {
 			transition: $transition ease opacity 0s;
 			&:hover {
@@ -31,7 +31,7 @@
 	&_bg-primary2 {
 		background-color: $Primary2;
 		color: $White;
-		
+
 		@media (any-hover: hover) {
 			transition: $transition ease opacity 0s;
 			&:hover {
@@ -40,7 +40,44 @@
 		}
 	}
 
-	&--fw {
-		width: 100%;
+	// .btn_bg-grey
+	&_bg-grey {
+		background-color: $Grey9;
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				color: $White;
+				background-color: $Primary1;
+			}
+		}
+	}
+
+	// .btn_bg-grey
+	&_bg-grey {
+		background-color: $Grey9;
+	}
+
+	// .btn_border-grey
+	&_border-grey {
+		color: $Primary2;
+		border: toRem(1) solid $Grey6;
+
+		svg {
+			fill: $Primary2;
+			transition: $transition ease fill 0s;
+		}
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				background-color: $Primary2;
+				color: $White;
+
+				svg {
+					fill: $White;
+				}
+			}
+		}
 	}
 }

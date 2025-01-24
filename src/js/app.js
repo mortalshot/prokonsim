@@ -34,7 +34,7 @@ import * as flsFunctions from "./files/functions.js";
 /* Добавление класса touch для HTML если браузер мобильный */
 // flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
-// flsFunctions.addLoadedClass();
+flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
 /* Форматирование чисел */
@@ -52,14 +52,14 @@ flsFunctions.menuInit();
 Документация: https://start-template.ru/modul-taby-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): tabs
 */
-//flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показать еще"
 Документация: https://start-template.ru/modul-pokazat-eshhe-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Модуль "До/После"

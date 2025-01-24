@@ -29,7 +29,6 @@ function initSliders() {
 	//Список слайдеров
 	//Проверяем, есть ли слайдер на странице
 	if (document.querySelector('.main-slider__slider')) {
-		//Создаем слайдер
 		new Swiper('.main-slider__slider', {
 			modules: [Navigation, Pagination],
 			observer: true,
@@ -97,6 +96,96 @@ function initSliders() {
 				},
 			},
 			*/
+			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.widget-products__slider')) {
+		const widgetSlider = document.querySelectorAll('.widget-products__slider');
+		if (widgetSlider.length > 0) {
+			widgetSlider.forEach(widgetSlider => {
+				const slider = new Swiper(widgetSlider, {
+					modules: [Navigation],
+					observer: true,
+					observeParents: true,
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+					speed: 800,
+					watchOverflow: true,
+
+					// Кнопки "влево/вправо"
+					navigation: {
+						prevEl: widgetSlider.querySelector('.swiper-arrow_prev'),
+						nextEl: widgetSlider.querySelector('.swiper-arrow_next'),
+					},
+
+
+					// Брейкпоинты
+					breakpoints: {
+						480: {
+							slidesPerView: 1.5,
+							spaceBetween: 20,
+						},
+						575: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						768: {
+							slidesPerView: 2.7,
+							spaceBetween: 20,
+						},
+						1024: {
+							slidesPerView: 3.40,
+							spaceBetween: 20,
+						},
+						1280: {
+							slidesPerView: 4,
+							spaceBetween: 20,
+						},
+						1480: {
+							slidesPerView: 5,
+							spaceBetween: 20,
+						},
+						1640: {
+							slidesPerView: 6,
+							spaceBetween: 20,
+						},
+					},
+
+					// События
+					on: {
+
+					}
+				});
+			});
+		}
+	}
+
+	if (document.querySelector('.widget-events__slider')) {
+		new Swiper('.widget-events__slider', {
+			modules: [],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.14,
+			spaceBetween: 20,
+			speed: 800,
+			watchOverflow: true,
+
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 2.25,
+					spaceBetween: 20,
+				},
+				1280: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+
 			// События
 			on: {
 

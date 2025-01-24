@@ -2,21 +2,36 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		gap: toRem(10);
 	}
+
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-		border-radius: toRem(5);
+		font-weight: 500;
+		min-height: toRem(48);
+		padding: toRem(12) toRem(25);
+		border: toRem(1) solid $Grey7;
+		background-color: $White;
+		transition: $transition ease all 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $Primary2;
+				box-shadow: 0 5px 10px 0 rgba(39, 44, 50, 0.04);
+			}
+		}
+
 		&._tab-active {
-			border: 1px solid #000;
+			background-color: $Primary2;
+			color: $White;
+			border-color: $Primary2;
 		}
 	}
+
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
 	}
+
 	// .tabs__body
 	&__body {
 	}

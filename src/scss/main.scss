@@ -7,16 +7,45 @@
   // .main-slider__slider
   &__slider {
     position: relative;
+
+    .swiper-arrow {
+      position: absolute;
+      top: 50%;
+
+      @media (any-hover: hover) {
+        &:hover {
+          &:not(.swiper-button-disabled) {
+            svg {
+              fill: rgba($color: $mainColor, $alpha: 0.5);
+            }
+          }
+        }
+      }
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+
+      svg {
+        transition: $transition ease fill 0s;
+      }
+
+      // .swiper-arrow_prev
+      &_prev {
+        transform: rotate(-180deg) translateY(calc(50% + toRem(23.5)));
+        @include adaptiveValue("left", 40, 15, 0, 1920, 1024);
+      }
+
+      // .swiper-arrow_next
+      &_next {
+        transform: translateY(calc(-50% - toRem(23.5)));
+        @include adaptiveValue("right", 40, 15, 0, 1920, 1024);
+      }
+    }
   }
 
   // .main-slider__wrapper
   &__wrapper {
-  }
-
-  .swiper-arrow {
-    @media (max-width: $tablet) {
-      display: none;
-    }
   }
 
   // .main-slider__slide
@@ -124,6 +153,1037 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+
+// .widget-catalog     ====================================================================================================
+.widget-catalog {
+  // .widget-catalog__container
+  &__container {
+  }
+
+  // .widget-catalog__heading
+  &__heading {
+  }
+
+  // .widget-catalog__title
+  &__title {
+  }
+
+  // .widget-catalog__cards
+  &__cards {
+    display: grid;
+    gap: toRem(10);
+
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: toEm(1280)) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+
+    .widget-catalog__card {
+      &:nth-child(2) {
+        @media (max-width: $mobile) {
+          grid-row: 3/4;
+        }
+      }
+      &:nth-child(6) {
+        @media (min-width: toEm(1280)) {
+          display: none;
+        }
+        @media (min-width: $mobile) and (max-width: toEm(1280)) {
+          grid-row: 3/4;
+          grid-column: 3/4;
+        }
+      }
+      &:nth-child(7) {
+        @media (min-width: toEm(1280)) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // .widget-catalog__items
+  &__items {
+    @media (min-width: $mobileSmall) {
+      display: grid;
+      gap: toRem(10);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: toEm(1280)) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media (min-width: toEm(1480)) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (max-width: $mobileSmall) {
+      display: none;
+    }
+  }
+
+  // .widget-catalog__card
+  &__card {
+    // .widget-catalog__card_row2
+    &_row2 {
+      @media (min-width: $mobile) {
+        grid-row: span 2;
+      }
+      @media (min-width: $mobileSmall) and (max-width: $mobile) {
+        grid-column: span 2;
+
+        .catalog-card__image {
+          margin-right: toRem(-20);
+          margin-bottom: toRem(-52);
+        }
+      }
+
+      .catalog-card__image {
+        padding-bottom: 0;
+      }
+
+      img {
+        width: initial !important;
+        height: initial !important;
+        position: initial !important;
+      }
+    }
+  }
+
+  // .widget-catalog__big
+  &__big {
+    gap: toRem(10);
+    @media (min-width: $mobileSmall) {
+      grid-column: span 2;
+      display: flex;
+    }
+    @media (max-width: $mobileSmall) {
+      display: grid;
+    }
+
+    .catalog-card__image {
+      margin-bottom: toRem(-20);
+      @include adaptiveValue("margin-top", -61, -40, 0, 1480, 1280);
+    }
+
+    &:nth-child(1),
+    &:nth-child(5) {
+      .widget-catalog__card {
+        flex: 0 0 100%;
+      }
+
+      .catalog-card__title {
+        font-size: toRem(24);
+        line-height: math.div(32, 24);
+      }
+
+      .catalog-card__image {
+        margin-right: toRem(-20);
+        margin-bottom: toRem(-52);
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      @media (min-width: $mobileSmall) {
+        .widget-catalog__card {
+          flex: 0 0 calc(50% - toRem(5));
+        }
+      }
+    }
+  }
+}
+
+.catalog-card {
+  @media (any-hover: hover) {
+    &:hover {
+      .catalog-card__image {
+        transform: scale(1.05) translate(-5%, -5%);
+      }
+    }
+  }
+  // .catalog-card__wrapper
+  &__wrapper {
+    height: 100%;
+    position: relative;
+    background-color: $Grey9;
+    padding: toRem(20);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: toRem(250);
+
+    @media (min-width: $tablet) {
+      padding-left: toRem(25);
+    }
+    @media (min-width: toEm(1280)) {
+      @include adaptiveValue("min-height", 250, 230, 0, 1920, 1480);
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 toRem(253);
+      width: toRem(253);
+      height: toRem(118);
+      background: url(../img/products/vector.svg) no-repeat center/cover;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+    }
+  }
+
+  // .catalog-card__heading
+  &__heading {
+    &:not(:last-child) {
+      margin-bottom: toRem(8);
+    }
+  }
+
+  // .catalog-card__caption
+  &__caption {
+    @media (min-width: $mobileSmall) {
+      padding-top: toRem(20);
+    }
+  }
+
+  // .catalog-card__title
+  &__title {
+    font-weight: 700;
+    font-size: toRem(18);
+    line-height: math.div(24, 18);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 15, 8);
+    }
+  }
+
+  // .catalog-card__tag
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: toRem(7) toRem(12);
+    gap: toRem(10);
+    min-height: toRem(34);
+    font-weight: 700;
+    font-size: toRem(14);
+    line-height: math.div(20, 14);
+    color: $Primary2;
+    background-color: $White;
+
+    svg {
+      flex: 0 0 toRem(16);
+      width: toRem(16);
+      height: toRem(16);
+      fill: $Primary2;
+    }
+  }
+
+  // .catalog-card__num
+  &__num {
+    span {
+      display: inline-flex;
+      padding: toRem(6) toRem(10);
+      font-weight: 500;
+      font-size: toRem(14);
+      line-height: math.div(20, 14);
+      color: $Grey2;
+      background-color: $White;
+    }
+  }
+
+  // .catalog-card__label
+  &__label {
+    position: absolute;
+    font-size: toRem(12);
+    line-height: math.div(18, 12);
+    top: toRem(10);
+    right: toRem(10);
+  }
+
+  // .catalog-card__image
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    align-items: flex-end;
+    position: relative;
+    pointer-events: none;
+    margin-bottom: toRem(-5);
+    transition: $transition ease transform 0s;
+  }
+}
+
+// .widget-products     ====================================================================================================
+.widget-products {
+  background-color: $Grey9;
+
+  .swiper-arrows {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: toRem(-78);
+      margin-bottom: toRem(30);
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .swiper-arrow {
+    flex: 0 0 toRem(48);
+    width: toRem(48);
+    height: toRem(48);
+    border: toRem(1) solid $Grey6;
+    transition: $transition ease all 0s;
+
+    svg {
+      fill: $Grey2;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &:not(.swiper-button-disabled) {
+          background-color: $Primary1;
+          border-color: $Primary1;
+
+          svg {
+            fill: $White;
+          }
+        }
+      }
+    }
+
+    &_prev {
+      transform: rotate(-180deg);
+    }
+
+    &_next {
+      &:not(.swiper-button-disabled) {
+        background-color: $Primary1;
+        border-color: $Primary1;
+
+        svg {
+          fill: $White;
+        }
+      }
+    }
+  }
+
+  // .widget-products__tabs
+  &__tabs {
+    max-width: toRem($containerWidth);
+    margin: 0 auto;
+    @include adaptiveValue("padding-left", 20, 15, 0, 1024, 375);
+    @include adaptiveValue("padding-right", 20, 15, 0, 1024, 375);
+
+    .tabs__navigation {
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+
+      @media (min-width: $tablet) {
+        margin-right: toRem(120);
+      }
+      @media (max-width: $tablet) {
+        @include adaptiveValue("padding-left", 20, 15, 0, 1024, 375);
+        @include adaptiveValue("padding-right", 20, 15, 0, 1024, 375);
+        @include adaptiveValue("margin-left", -20, -15, 0, 1024, 375);
+        @include adaptiveValue("margin-right", -20, -15, 0, 1024, 375);
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .tabs__title {
+      white-space: nowrap;
+    }
+  }
+
+  // .widget-products__slider
+  &__slider {
+    max-width: toRem($containerWidth);
+    margin: 0 auto;
+    overflow: initial !important;
+  }
+
+  // .widget-products__wrapper
+  &__wrapper {
+  }
+
+  // .widget-products__slide
+  &__slide {
+  }
+
+  // .widget-products_white
+  &_white {
+    background-color: $White;
+
+    .product-item__wrapper {
+      border: toRem(1) solid $Grey6;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.product-item {
+  height: 100%;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .product-item__wrapper {
+        box-shadow:
+          0 10px 30px 0 rgba(57, 64, 83, 0.1),
+          0 2px 8px 0 rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+
+  // .product-item__wrapper
+  &__wrapper {
+    display: grid;
+    align-content: flex-start;
+    row-gap: toRem(15);
+    height: 100%;
+    padding: toRem(15);
+    background-color: $White;
+    box-shadow: 0 5px 10px 0 rgba(39, 44, 50, 0.04);
+    transition: $transition ease box-shadow 0s;
+    position: relative;
+  }
+
+  // .product-item__heading
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  // .product-item__labels
+  &__labels {
+    display: flex;
+    align-items: center;
+    gap: toRem(5);
+  }
+
+  // .product-item__label
+  &__label {
+    font-size: toRem(12);
+    min-height: toRem(24);
+  }
+
+  // .product-item__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+
+  // .product-item__action
+  &__action {
+    position: relative;
+    z-index: 1;
+
+    @media (any-hover: hover) {
+      &:hover {
+        svg {
+          fill: $Primary1;
+        }
+      }
+    }
+
+    svg {
+      transition: $transition ease fill 0s;
+    }
+  }
+
+  // .product-item__image
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: toRem(210);
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .product-item__body
+  &__body {
+    display: grid;
+    align-content: flex-start;
+    row-gap: toRem(5);
+  }
+
+  // .product-item__code
+  &__code {
+    font-size: toRem(14);
+    line-height: math.div(20, 14);
+    color: $Grey3;
+  }
+
+  // .product-item__price
+  &__price {
+  }
+
+  // .product-item__name
+  &__name {
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  // .product-item__available
+  &__available {
+    font-weight: 500;
+    font-size: toRem(14);
+    line-height: math.div(20, 14);
+  }
+
+  // .product-item__link
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: toRem(5);
+  font-size: toRem(14);
+  line-height: math.div(20, 14);
+
+  // .price__label
+  &__label {
+    color: $Grey4;
+    font-weight: 500;
+  }
+
+  // .price__current
+  &__current {
+    font-weight: 700;
+    font-size: toRem(18);
+    line-height: math.div(24, 18);
+  }
+
+  // .price__old
+  &__old {
+    text-decoration: line-through;
+    color: $Grey4;
+
+    &:not(:first-child) {
+      margin-left: toRem(5);
+    }
+  }
+}
+
+// .widget-brands     ====================================================================================================
+.widget-brands {
+  // .widget-brands__container
+  &__container {
+  }
+
+  // .widget-brands__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(20);
+  }
+
+  // .widget-brands__title
+  &__title {
+  }
+
+  // .widget-brands__link
+  &__link {
+    .btn {
+      padding-top: toRem(8);
+      padding-bottom: toRem(8);
+      min-height: toRem(44);
+
+      svg {
+        flex: 0 0 toRem(20);
+        width: toRem(20);
+        height: toRem(20);
+      }
+    }
+  }
+
+  // .widget-brands__items
+  &__items {
+    display: grid;
+  }
+
+  // .widget-brands__scheme
+  &__scheme {
+    display: flex;
+    flex-wrap: wrap;
+    margin: toRem(-5);
+
+    @media (min-width: $mobile) {
+      margin: toRem(-10);
+    }
+  }
+
+  .block__more {
+    width: 100%;
+    max-width: toRem(168);
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.brands-item {
+  padding: toRem(5);
+
+  @media (min-width: $mobileSmall) {
+    flex: 0 0 50%;
+  }
+  @media (min-width: $mobile) {
+    padding: toRem(10);
+    flex: 0 0 33.333%;
+  }
+  @media (min-width: toEm(1280)) {
+    flex: 0 0 20%;
+  }
+  @media (min-width: toEm(1480)) {
+    flex: 0 0 16.666%;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .brands-item__wrapper {
+        box-shadow:
+          0 10px 30px 0 rgba(57, 64, 83, 0.1),
+          0 2px 8px 0 rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+
+  // .brands-item__wrapper
+  &__wrapper {
+    height: 100%;
+    padding: toRem(20) toRem(15);
+    border: toRem(1) solid $Grey6;
+    display: flex;
+    flex-direction: column;
+    transition: $transition ease box-shadow 0s;
+  }
+
+  // .brands-item__logo
+  &__logo {
+    position: relative;
+    padding-bottom: toRem(60);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(10);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .brands-item__body
+  &__body {
+    flex: 1;
+    display: grid;
+    align-content: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: toRem(5);
+      }
+    }
+  }
+
+  // .brands-item__category
+  &__category {
+    font-weight: 700;
+  }
+
+  // .brands-item__text
+  &__text {
+  }
+
+  // .brands-item__num
+  &__num {
+    font-weight: 500;
+    font-size: toRem(14);
+    color: $Grey2;
+  }
+
+  // .brands-item__button
+  &__button {
+    .btn {
+      font-size: toRem(14);
+      padding-left: toRem(10);
+      padding-right: toRem(10);
+      width: 100%;
+
+      &.btn_bg-primary2 {
+        background-color: rgba($color: $Primary2, $alpha: 0.1);
+        color: $Primary2;
+
+        @media (any-hover: hover) {
+          transition: $transition ease all 0s;
+
+          &:hover {
+            color: $White;
+            background-color: $Primary2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .widget-events     ====================================================================================================
+.widget-events {
+  // .widget-events__container
+  &__container {
+  }
+
+  // .widget-events__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(20);
+  }
+
+  // .widget-events__title
+  &__title {
+  }
+
+  // .widget-events__link
+  &__link {
+    @media (max-width: $mobile) {
+      display: flex;
+      justify-content: center;
+      margin-top: toRem(30);
+    }
+
+    .btn {
+      svg {
+        flex: 0 0 toRem(20);
+        width: toRem(20);
+        height: toRem(20);
+      }
+    }
+  }
+
+  // .widget-events__tabs
+  &__tabs {
+    &:not(:first-child) {
+      margin-top: toRem(20);
+    }
+
+    .tabs {
+      // .tabs__navigation
+      &__navigation {
+      }
+      // .tabs__title
+      &__title {
+        min-height: toRem(38);
+        padding: toRem(6) toRem(20);
+        border-color: $Grey6;
+
+        &._tab-active {
+          background-color: $Grey8;
+          border-color: $Grey8;
+          color: $mainColor;
+        }
+      }
+      // .tabs__content
+      &__content {
+      }
+      // .tabs__body
+      &__body {
+      }
+    }
+  }
+
+  // .widget-events__slider
+  &__slider {
+    @media (min-width: $tablet) {
+      padding-left: toRem(20);
+      padding-right: toRem(20);
+      margin-left: toRem(-20);
+      margin-right: toRem(-20);
+    }
+    @media (max-width: $tablet) {
+      @include adaptiveValue("margin-left", -20, -15, 0, 1024, 375);
+      @include adaptiveValue("margin-right", -20, -15, 0, 1024, 375);
+      @include adaptiveValue("padding-left", 20, 15, 0, 1024, 375);
+      @include adaptiveValue("padding-right", 20, 15, 0, 1024, 375);
+    }
+  }
+
+  // .widget-events__wrapper
+  &__wrapper {
+  }
+
+  // .widget-events__slide
+  &__slide {
+  }
+}
+
+.event-card {
+  // .event-card__wrapper
+  &__wrapper {
+    position: relative;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .event-card__preview img {
+          transform: scale(1.05) translateY(-5px);
+        }
+
+        .event-card__name {
+          color: $Primary2;
+        }
+      }
+    }
+  }
+
+  // .event-card__preview
+  &__preview {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: percent(240, 425);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(16);
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s ease transform 0s;
+    }
+  }
+
+  // .event-card__body
+  &__body {
+    display: grid;
+    align-content: flex-start;
+    row-gap: toRem(10);
+  }
+
+  // .event-card__date
+  &__date {
+    color: $Grey4;
+  }
+
+  // .event-card__name
+  &__name {
+    font-weight: 500;
+    line-height: math.div(26, 20);
+    transition: $transition ease color 0s;
+    @include adaptiveValue("font-size", 20, 16, 1024, 375);
+  }
+
+  // .event-card__link
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// .experience     ====================================================================================================
+.experience {
+  background-color: #f3f5f7;
+  max-width: toRem(1920);
+  margin-left: auto;
+  margin-right: auto;
+
+  // .experience__scheme
+  &__scheme {
+    display: grid;
+    @media (min-width: $mobile) {
+      grid-template-columns: percent(512, 1024) 1fr;
+    }
+    @media (min-width: toEm(1280)) {
+      grid-template-columns: percent(613, 1920) 1fr;
+    }
+
+    & > * {
+      @media (min-width: $tablet) {
+        @include adaptiveValue("padding-top", 80, 60, 0, 1920, 1024);
+        @include adaptiveValue("padding-bottom", 80, 60, 0, 1920, 1024);
+        @include adaptiveValue("padding-left", 108, 40, 0, 1920, 1024);
+        @include adaptiveValue("padding-right", 108, 40, 0, 1920, 1024);
+      }
+      @media (max-width: $tablet) {
+        @include adaptiveValue("padding-top", 60, 40, 0, 1024, 768);
+        @include adaptiveValue("padding-bottom", 60, 40, 0, 1024, 768);
+        @include adaptiveValue("padding-left", 40, 15, 0, 1024, 375);
+        @include adaptiveValue("padding-right", 40, 15, 0, 1024, 375);
+      }
+    }
+  }
+
+  // .experience__left
+  &__left {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-items: flex-end;
+    align-content: center;
+    align-items: center;
+
+    @media (min-width: $mobile) {
+      background-image: url(../img/experience/experience-bg_tablet.svg);
+    }
+    @media (min-width: toEm(1280)) {
+      background-image: url(../img/experience/experience-bg_desk.svg);
+    }
+    @media (max-width: $mobile) {
+      background-image: url(../img/experience/experience-bg_mobile.svg);
+    }
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+  }
+
+  // .experience__value
+  &__value {
+    font-weight: 500;
+    line-height: 1;
+    color: $Primary1;
+    @include adaptiveValue("font-size", 300, 250, 0, 1024, 375);
+
+    @media (min-width: toEm(1280)) {
+      @include adaptiveValue("font-size", 300, 250, 0, 1920, 1280);
+    }
+  }
+
+  // .experience__caption
+  &__caption {
+    text-align: right;
+    max-width: toRem(165);
+    color: $Grey1;
+  }
+
+  // .experience__right
+  &__right {
+    @media (min-width: $tablet) {
+      @include adaptiveValue("padding-left", 107, 40, 0, 1920, 1024);
+      @include adaptiveValue("padding-right", 107, 40, 0, 1920, 1024);
+    }
+    @media (max-width: $tablet) {
+      @include adaptiveValue("padding-left", 40, 15, 0, 1024, 375);
+      @include adaptiveValue("padding-right", 40, 15, 0, 1024, 375);
+    }
+  }
+
+  // .experience__title
+  &__title {
+    max-width: toRem(584);
+
+    &:not(:last-child) {
+      @media (min-width: $tablet) {
+        @include adaptiveValue("margin-bottom", 40, 30, 0, 1920, 1024);
+      }
+      @media (max-width: $tablet) {
+        @include adaptiveValue("margin-bottom", 30, 20, 0, 1024, 375);
+      }
+    }
+  }
+
+  // .experience__items
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 10, 0, 1920, 1024);
+
+    @media (min-width: toEm(1280)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .experience__item
+  &__item {
+  }
+}
+
+.experience-item {
+  // .experience-item__wrapper
+  &__wrapper {
+    height: 100%;
+    display: grid;
+    align-content: flex-start;
+    background-color: $White;
+    box-shadow: 0 5px 10px 0 rgba(39, 44, 50, 0.04);
+    @include adaptiveValue("row-gap", 10, 5, 0, 1920, 1024);
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("padding-top", 22, 15, 0, 1920, 1024);
+      @include adaptiveValue("padding-bottom", 22, 15, 0, 1920, 1024);
+      @include adaptiveValue("padding-left", 40, 20, 0, 1920, 1024);
+      @include adaptiveValue("padding-right", 40, 20, 0, 1920, 1024);
+    }
+    @media (max-width: $tablet) {
+      padding: toRem(20);
+    }
+  }
+
+  // .experience-item__title
+  &__title {
+    font-weight: 500;
+    color: $Primary2;
+    line-height: math.div(32, 24);
+    @include adaptiveValue("font-size", 24, 18, 0, 1924, 1024);
+  }
+
+  // .experience-item__text
+  &__text {
+    @include adaptiveValue("font-size", 18, 16, 0, 1924, 1024);
   }
 }
 

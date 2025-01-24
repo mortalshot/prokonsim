@@ -391,6 +391,8 @@
 }
 
 .header-bottom {
+	background-color: $White;
+
 	// .header-bottom__row
 	&__row {
 		min-height: toRem(75);
@@ -398,7 +400,6 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: toRem(30);
-		background-color: $White;
 	}
 
 	// .header-bottom__logo
@@ -655,12 +656,6 @@
 			min-height: toRem(50);
 			width: 100%;
 		}
-	}
-}
-
-.btn {
-	// .btn_bg-primary2
-	&_bg-primary2 {
 	}
 }
 

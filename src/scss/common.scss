@@ -12,6 +12,16 @@ h,
       @include adaptiveValue("font-size", 36, 20, 0, 1024, 375);
     }
   }
+  &2 {
+    font-weight: 700;
+    font-size: toRem(32);
+    line-height: math.div(42, 32);
+  }
+  &3 {
+    font-weight: 700;
+    font-size: toRem(24);
+    line-height: math.div(32, 24);
+  }
   &4 {
     font-weight: 700;
     line-height: math.div(26, 20);
@@ -27,8 +37,25 @@ video {
 }
 
 section {
-  @include adaptiveValue("margin-top", 100, 40);
-  @include adaptiveValue("margin-bottom", 100, 40);
+  @media (min-width: $tablet) {
+    @include adaptiveValue("margin-top", 80, 60, 0, 1920, 1024);
+    @include adaptiveValue("margin-bottom", 80, 60, 0, 1920, 1024);
+  }
+  @media (max-width: $tablet) {
+    @include adaptiveValue("margin-top", 60, 50, 0, 1024, 375);
+    @include adaptiveValue("margin-bottom", 60, 50, 0, 1024, 375);
+  }
+
+  &.section-bg {
+    @media (min-width: $tablet) {
+      @include adaptiveValue("padding-top", 80, 60, 0, 1920, 1024);
+      @include adaptiveValue("padding-bottom", 80, 60, 0, 1920, 1024);
+    }
+    @media (max-width: $tablet) {
+      @include adaptiveValue("padding-top", 60, 50, 0, 1024, 375);
+      @include adaptiveValue("padding-bottom", 60, 50, 0, 1024, 375);
+    }
+  }
 
   &:first-child {
     @media (min-width: $mobile) {
@@ -190,6 +217,52 @@ section {
   }
 }
 
+._heading {
+  &:not(:last-child) {
+    margin-bottom: toRem(30);
+  }
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: toRem(14);
+  line-height: math.div(20, 14);
+  min-height: toRem(28);
+  padding: toRem(4) toRem(10);
+
+  // .label_primary1
+  &_primary1 {
+    display: inline-flex;
+    color: $White;
+    background-color: $Primary1;
+  }
+
+  // .label_green
+  &_green {
+    background-color: $Green;
+    color: $White;
+  }
+
+  // .label_yellow
+  &_yellow {
+    background-color: $Yellow;
+  }
+}
+
+._color-primary1 {
+  color: $Primary1 !important;
+
+  svg {
+    fill: $Primary1 !important;
+  }
+}
+
+._color-orange {
+  color: $Orange;
+}
+
 // Анимации при наведении
 [class*="link-"] {
   position: relative;
@@ -297,10 +370,11 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     z-index: 1;
-    cursor: pointer;
-    top: 50%;
+
+    &:not(.swiper-button-disabled) {
+      cursor: pointer;
+    }
 
     svg {
       flex: 0 0 toRem(24);
@@ -308,16 +382,5 @@ section {
       width: toRem(24);
       fill: $Grey4;
     }
-  }
-
-  // .swiper-arrow_prev
-  &-arrow_prev {
-    transform: rotate(-180deg) translateY(calc(50% + toRem(23.5)));
-    @include adaptiveValue("left", 40, 15, 0, 1920, 1024);
-  }
-  // .swiper-arrow_next
-  &-arrow_next {
-    transform: translateY(calc(-50% - toRem(23.5)));
-    @include adaptiveValue("right", 40, 15, 0, 1920, 1024);
   }
 }
