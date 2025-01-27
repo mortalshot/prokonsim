@@ -53,9 +53,29 @@
 		}
 	}
 
-	// .btn_bg-grey
-	&_bg-grey {
-		background-color: $Grey9;
+	// .btn_bg-green
+	&_bg-green {
+		background-color: $Green;
+		color: $White;
+
+		@media (any-hover: hover) {
+			transition: $transition ease opacity 0s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	// .btn_bg-yellow
+	&_bg-yellow {
+		background-color: $Yellow;
+
+		@media (any-hover: hover) {
+			transition: $transition ease opacity 0s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
 	}
 
 	// .btn_border-grey

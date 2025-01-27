@@ -36,7 +36,8 @@ video {
   height: auto;
 }
 
-section {
+section,
+.section {
   @media (min-width: $tablet) {
     @include adaptiveValue("margin-top", 80, 60, 0, 1920, 1024);
     @include adaptiveValue("margin-bottom", 80, 60, 0, 1920, 1024);

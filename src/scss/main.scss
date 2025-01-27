@@ -1187,4 +1187,48 @@
   }
 }
 
+// .useful-links     ====================================================================================================
+.useful-links {
+  // .useful-links__container
+  &__container {
+  }
+
+  // .useful-links__nav
+  &__nav {
+    display: grid;
+    gap: toRem(10) toRem(20);
+
+    @media (min-width: $mobileM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: toEm(1280)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // .useful-links__items
+  &__items {
+    display: grid;
+    align-content: flex-start;
+    row-gap: toRem(10);
+  }
+
+  // .useful-links__item
+  &__item {
+    a {
+      display: flex;
+      padding: toRem(8) toRem(15);
+      color: $Primary2;
+      border: toRem(1) solid $Grey6;
+
+      @media (any-hover: hover) {
+        transition: $transition ease all 0s;
+        &:hover {
+          border: toRem(1) solid rgba($color: $Primary2, $alpha: 0.1);
+          background-color: rgba($color: $Primary2, $alpha: 0.1);
+        }
+      }
+    }
+  }
+}
 //====================================================================================================
