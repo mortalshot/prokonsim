@@ -264,6 +264,34 @@ section,
   color: $Orange;
 }
 
+.site-breadcrumbs {
+  color: $Grey3;
+  font-size: toRem(14);
+  line-height: math.div(20, 14);
+  display: flex;
+  align-items: center;
+  gap: toRem(5);
+
+  // .site-breadcrumbs__link
+  &__link {
+  }
+
+  // .site-breadcrumbs__separator
+  &__separator {
+    svg {
+      flex: 0 0 toRem(16);
+      width: toRem(16);
+      height: toRem(16);
+      fill: $Grey3;
+      transform: rotate(-90deg);
+    }
+  }
+
+  // .site-breadcrumbs__title
+  &__title {
+  }
+}
+
 // Анимации при наведении
 [class*="link-"] {
   position: relative;

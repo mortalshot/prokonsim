@@ -465,6 +465,9 @@
 						transform: translateY(0);
 					}
 				}
+				@media (min-width: toEm(1280)) {
+					min-width: toRem(250);
+				}
 			}
 
 			&._hover {
@@ -475,7 +478,9 @@
 				}
 
 				& > .menu__arrow {
-					transform: rotate(180deg);
+					svg {
+						transform: rotate(180deg);
+					}
 				}
 			}
 
@@ -499,7 +504,9 @@
 				&._hover {
 					& > .menu__arrow {
 						@media (min-width: $mobile) {
-							transform: rotate(-90deg);
+							svg {
+								transform: rotate(-90deg);
+							}
 						}
 					}
 				}
@@ -518,6 +525,13 @@
 
 		// .menu__item_more
 		&_more {
+			@media (min-width: $mobile) {
+				.menu__arrow {
+					display: flex;
+					align-items: center;
+					gap: toRem(5);
+				}
+			}
 			@media (min-width: toEm(1320)) {
 				display: none;
 			}
@@ -539,6 +553,9 @@
 
 	// .menu__arrow
 	&__arrow {
+		svg {
+			transition: $transition ease transform 0s;
+		}
 	}
 
 	// .menu__sub-list

@@ -1,15 +1,19 @@
 //<QUANTITY>
 // Сниппет (HTML): qa
 .quantity {
-	width: 88px;
-	height: 40px;
+	width: toRem(200);
+	height: toRem(48);
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
+	border: 1px solid $Grey6;
+	background-color: $Grey9;
+	padding: toRem(14) toRem(15);
+
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
+		flex: 0 0 toRem(20);
 		position: relative;
 		cursor: pointer;
+
 		&::before,
 		&::after {
 			content: "";
@@ -31,24 +35,28 @@
 			}
 		}
 		// .quantity__button_plus
-		&--plus {
+		&_plus {
 			&::before {
 				transform: rotate(-90deg);
 			}
 		}
 		// .quantity__button_minus
-		&--minus {
+		&_minus {
 		}
 	}
 	// .quantity__input
 	&__input {
+		display: flex;
 		flex: 1 1 auto;
+
 		input {
 			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
 			width: 100%;
 			text-align: center;
+			font-weight: 500;
+			font-size: toRem(16);
+			line-height: math.div(22, 16);
+			color: $Grey1;
 		}
 	}
 }

@@ -10,7 +10,8 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20250127154747">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250129171955">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250129171955">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +25,12 @@
 					<div class="header-top__row">
 						<div class="header-top__left">
 							<div class="header-top__location location" data-da=".menu__body, 767.98, 0">
-								<button type="button" class="location__button">
+								<a href="" class="location__button">
 									<svg class="icon">
 										<use xlink:href="img/icons/icons.svg#location"></use>
 									</svg>
 									<span>Санкт-Петербург</span>
-								</button>
+								</a>
 
 								<div class="location__select">
 									<div class="location__head">
@@ -224,9 +225,9 @@
 										</li>
 
 										<li class="menu__item menu__item_more menu__item_has-children">
-											<a href="" class="menu__button">Еще</a>
-
 											<button type="button" class="menu__arrow" tabindex="-1">
+												<span>Еще</span>
+
 												<svg class="icon">
 													<use xlink:href="img/icons/icons.svg#chevron"></use>
 												</svg>
@@ -252,7 +253,7 @@
 				<div class="header__container">
 					<div class="header-bottom__row">
 						<div class="header-bottom__logo logo" data-da=".header-top__left, 767.98">
-							<a href="" class="logo__link">
+							<a href="home.html" class="logo__link">
 								<img src="img/logo.svg" alt="" loading="lazy">
 							</a>
 						</div>
@@ -1066,33 +1067,15 @@
 								</div>
 							</div>
 
-							<div class="main-slider__slide swiper-slide">
-								<div class="main-slider__bg">
-									<img src="img/main-slider/main-slider-slide1-bg.webp" alt="" loading="lazy">
+							<a href="" class="main-slider__slide swiper-slide">
+								<div class="main-slider__banner">
+									<picture>
+										<source srcset="img/main-slider/main-slider-slide2-bg_desk.webp" media="(min-width: 1279.98px)">
+										<source srcset="img/main-slider/main-slider-slide2-bg_tabl.webp" media="(min-width: 767.98px)">
+										<img src="img/main-slider/main-slider-slide2-bg_mob.webp" alt="" loading="lazy">
+									</picture>
 								</div>
-								<div class="main-slider__scheme">
-									<div class="main-slider__body">
-										<div class="main-slider__tag">
-											<img src="img/main-slider/main-slider-slide1-icon.svg" alt="" loading="lazy">
-											<span>Более 20 000 товаров в наличии</span>
-										</div>
-
-										<h1 class="main-slider__title">Трубопроводная арматура для&nbsp;водоснабжения, теплоснабжения и канализации</h1>
-
-										<div class="main-slider__button">
-											<a href="" class="btn btn_bg-primary1">
-												<span>Перейти в каталог</span>
-												<svg class="icon icon_chevron">
-													<use xlink:href="img/icons/icons.svg#chevron"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-									<div class="main-slider__image">
-										<img src="img/main-slider/main-slider-slide1-image.webp" alt="" loading="lazy">
-									</div>
-								</div>
-							</div>
+							</a>
 						</div>
 
 						<div class="swiper-arrow swiper-arrow_next">
@@ -1647,68 +1630,22 @@
 								<div class="widget-products__wrapper swiper-wrapper">
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -1718,85 +1655,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
+														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image4.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_primary1">-30%</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -1806,88 +1693,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image3.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -1897,42 +1731,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -1942,42 +1769,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -1987,42 +1807,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2032,42 +1845,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2077,105 +1883,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="tabs__body">
-							<div class="widget-products__slider swiper">
-								<div class="swiper-arrows">
-									<div class="swiper-arrow swiper-arrow_prev">
-										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-									</div>
-									<div class="swiper-arrow swiper-arrow_next">
-										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-									</div>
-								</div>
-
-								<div class="widget-products__wrapper swiper-wrapper">
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image4.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
-														<div class="product-item__label label label_primary1">-30%</div>
+														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2185,88 +1921,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image3.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2276,198 +1959,15 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -2834,68 +2334,22 @@
 								<div class="widget-products__wrapper swiper-wrapper">
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2905,85 +2359,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
+														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image4.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_primary1">-30%</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -2993,88 +2397,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image3.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3084,42 +2435,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3129,42 +2473,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3174,42 +2511,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3219,42 +2549,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3264,105 +2587,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="tabs__body">
-							<div class="widget-products__slider swiper">
-								<div class="swiper-arrows">
-									<div class="swiper-arrow swiper-arrow_prev">
-										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-									</div>
-									<div class="swiper-arrow swiper-arrow_next">
-										<svg class="icon">
-											<use xlink:href="img/icons/icons.svg#arrow"></use>
-										</svg>
-									</div>
-								</div>
-
-								<div class="widget-products__wrapper swiper-wrapper">
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image4.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
-														<div class="product-item__label label label_primary1">-30%</div>
+														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3372,88 +2625,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_yellow">Распродажа</div>
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/category-image3.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3463,42 +2663,35 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 									<div class="widget-products__slide swiper-slide">
 										<div class="product-item">
-											<div class="product-item__wrapper">
+											<a href="" class="product-item__wrapper">
 												<div class="product-item__heading">
 													<div class="product-item__labels">
 														<div class="product-item__label label label_green">new</div>
 													</div>
 
 													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
 														</div>
 													</div>
 												</div>
@@ -3508,153 +2701,15 @@
 												</div>
 
 												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
+													<div class="product-item__code">Арт:&nbsp;930185400</div>
 													<div class="product-item__price price">
-														<div class="price__label">от</div>
 														<div class="price__current">292 000 ₽</div>
 														<div class="price__old">370 000 ₽</div>
 													</div>
 													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
 													<div class="product-item__available _color-orange">Под заказ</div>
 												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
-										</div>
-									</div>
-									<div class="widget-products__slide swiper-slide">
-										<div class="product-item">
-											<div class="product-item__wrapper">
-												<div class="product-item__heading">
-													<div class="product-item__labels">
-														<div class="product-item__label label label_green">new</div>
-													</div>
-
-													<div class="product-item__actions">
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#compare"></use>
-																</svg>
-															</button>
-														</div>
-														<div class="product-item__action">
-															<button type="button">
-																<svg class="icon">
-																	<use xlink:href="img/icons/icons.svg#wishlist"></use>
-																</svg>
-															</button>
-														</div>
-													</div>
-												</div>
-
-												<div class="product-item__image">
-													<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
-												</div>
-
-												<div class="product-item__body">
-													<div class="product-item__code">Арт: 930185400</div>
-													<div class="product-item__price price">
-														<div class="price__label">от</div>
-														<div class="price__current">292 000 ₽</div>
-														<div class="price__old">370 000 ₽</div>
-													</div>
-													<div class="product-item__name">Задвижки стальные 30с527нж с редуктором класс ''А'' САЗ</div>
-													<div class="product-item__available _color-orange">Под заказ</div>
-												</div>
-
-												<a href="single-product.html" class="product-item__link"></a>
-											</div>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -3692,7 +2747,7 @@
 									<div class="widget-events__wrapper swiper-wrapper">
 										<div class="widget-events__slide swiper-slide">
 											<div class="event-card">
-												<div class="event-card__wrapper">
+												<a href="" class="event-card__wrapper">
 													<div class="event-card__preview">
 														<img src="img/events/event1-preview.webp" alt="" loading="lazy">
 													</div>
@@ -3701,15 +2756,13 @@
 														<div class="event-card__date">12.05.2023 </div>
 														<div class="event-card__name">Подразделение в Санкт-Петербурге переезжает по новому адресу.</div>
 													</div>
-
-													<a href="" class="event-card__link"></a>
-												</div>
+												</a>
 											</div>
 										</div>
 
 										<div class="widget-events__slide swiper-slide">
 											<div class="event-card">
-												<div class="event-card__wrapper">
+												<a href="" class="event-card__wrapper">
 													<div class="event-card__preview">
 														<img src="img/events/event2-preview.webp" alt="" loading="lazy">
 													</div>
@@ -3718,15 +2771,13 @@
 														<div class="event-card__date">12.05.2023 </div>
 														<div class="event-card__name">Проконсим - расширяет ассортимент маркой Rifar</div>
 													</div>
-
-													<a href="" class="event-card__link"></a>
-												</div>
+												</a>
 											</div>
 										</div>
 
 										<div class="widget-events__slide swiper-slide">
 											<div class="event-card">
-												<div class="event-card__wrapper">
+												<a href="" class="event-card__wrapper">
 													<div class="event-card__preview">
 														<img src="img/events/event3-preview.webp" alt="" loading="lazy">
 													</div>
@@ -3735,15 +2786,13 @@
 														<div class="event-card__date">12.05.2023 </div>
 														<div class="event-card__name">Расширяем ассортимент насосного оборудования</div>
 													</div>
-
-													<a href="" class="event-card__link"></a>
-												</div>
+												</a>
 											</div>
 										</div>
 
 										<div class="widget-events__slide swiper-slide">
 											<div class="event-card">
-												<div class="event-card__wrapper">
+												<a href="" class="event-card__wrapper">
 													<div class="event-card__preview">
 														<img src="img/events/event4-preview.webp" alt="" loading="lazy">
 													</div>
@@ -3752,9 +2801,7 @@
 														<div class="event-card__date">12.05.2023 </div>
 														<div class="event-card__name">Ликвидация остатков шаровых латунных кранов Valfex</div>
 													</div>
-
-													<a href="" class="event-card__link"></a>
-												</div>
+												</a>
 											</div>
 										</div>
 									</div>
@@ -3787,7 +2834,7 @@
 						<div class="widget-events__wrapper swiper-wrapper">
 							<div class="widget-events__slide swiper-slide">
 								<div class="event-card">
-									<div class="event-card__wrapper">
+									<a href="" class="event-card__wrapper">
 										<div class="event-card__preview">
 											<img src="img/events/event5-preview.webp" alt="" loading="lazy">
 										</div>
@@ -3796,15 +2843,13 @@
 											<div class="event-card__date">12.05.2023 </div>
 											<div class="event-card__name">Завод Mercedes Benz Manufacturing Rus</div>
 										</div>
-
-										<a href="" class="event-card__link"></a>
-									</div>
+									</a>
 								</div>
 							</div>
 
 							<div class="widget-events__slide swiper-slide">
 								<div class="event-card">
-									<div class="event-card__wrapper">
+									<a href="" class="event-card__wrapper">
 										<div class="event-card__preview">
 											<img src="img/events/event6-preview.webp" alt="" loading="lazy">
 										</div>
@@ -3813,15 +2858,13 @@
 											<div class="event-card__date">12.05.2023 </div>
 											<div class="event-card__name">ТРЦ Акварель</div>
 										</div>
-
-										<a href="" class="event-card__link"></a>
-									</div>
+									</a>
 								</div>
 							</div>
 
 							<div class="widget-events__slide swiper-slide">
 								<div class="event-card">
-									<div class="event-card__wrapper">
+									<a href="" class="event-card__wrapper">
 										<div class="event-card__preview">
 											<img src="img/events/event7-preview.webp" alt="" loading="lazy">
 										</div>
@@ -3830,15 +2873,13 @@
 											<div class="event-card__date">12.05.2023 </div>
 											<div class="event-card__name">Объект ЖК «Neva Towers»</div>
 										</div>
-
-										<a href="" class="event-card__link"></a>
-									</div>
+									</a>
 								</div>
 							</div>
 
 							<div class="widget-events__slide swiper-slide">
 								<div class="event-card">
-									<div class="event-card__wrapper">
+									<a href="" class="event-card__wrapper">
 										<div class="event-card__preview">
 											<img src="img/events/event8-preview.webp" alt="" loading="lazy">
 										</div>
@@ -3847,9 +2888,7 @@
 											<div class="event-card__date">12.05.2023 </div>
 											<div class="event-card__name">Объект ЖК «Современник»</div>
 										</div>
-
-										<a href="" class="event-card__link"></a>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -4130,7 +3169,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250127154747"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250129171955"></script>
+	<script src="js/app.min.js?_v=20250129171955"></script>
 </body>
 
 </html>
