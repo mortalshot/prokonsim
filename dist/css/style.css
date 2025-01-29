@@ -3631,7 +3631,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width:80em) {
   .menu__item_has-children > ul {
-    min-width: 15.625rem
+    min-width: 15.9375rem
   }
   .offers::before {
     left: 33.8020833333%
