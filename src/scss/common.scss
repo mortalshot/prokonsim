@@ -262,6 +262,18 @@ section,
 
 ._color-orange {
   color: $Orange;
+
+  svg {
+    fill: $Orange;
+  }
+}
+
+._color-green {
+  color: $Green;
+
+  svg {
+    fill: $Green;
+  }
 }
 
 .site-breadcrumbs {

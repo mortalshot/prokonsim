@@ -84,14 +84,6 @@ document.addEventListener('click', function (e) {
     parent.classList.remove('_card-show');
   }
 
-  if (targetElement.classList.contains('catalog-tags__button') || targetElement.closest('.catalog-tags__button')) {
-    const parent = targetElement.closest('.catalog-tags__more');
-    parent.classList.add('_active');
-  }
-  if (!targetElement.closest('.catalog-tags__more') && document.querySelector('.catalog-tags__more._active')) {
-    document.querySelector('.catalog-tags__more._active').classList.remove('_active');
-  }
-
   if (targetElement.classList.contains('catalog__filter-button') || targetElement.closest('.catalog__filter-button') && bodyLockStatus) {
     e.preventDefault();
     document.querySelector('body').classList.add('_filter-show');

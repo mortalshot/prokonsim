@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>catalog1</title>
+	<title>catalog2</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -10,8 +10,8 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250129172159">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250129172159">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250130175519">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250130175519">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1314,33 +1314,34 @@
 							</div>
 
 							<div class="catalog__heading">
-								<ul class="catalog__tags catalog-tags">
-									<li class="catalog-tags__item"> <a href="" class="_active">Ду 500 Ру 10</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 100</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 200</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 300</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 400</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 400</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 500</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 600</a> </li>
-									<li class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </li>
-									<li class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </li>
-
-
-									<div class="catalog-tags__more">
-										<button type="button" class="catalog-tags__button" tabindex="-1">
-											<svg class="icon">
-												<use xlink:href="img/icons/icons.svg#dots"></use>
-											</svg>
-										</button>
-
-										<ul id="dropdown-tags">
-											<li> <a href="">Ду 400</a> </li>
-											<li> <a href="">Ду 500</a> </li>
-											<li> <a href="">Ду 600</a> </li>
-										</ul>
+								<div data-showmore="items" class="catalog__tags catalog-tags">
+									<div data-showmore-content="1" class="block__content">
+										<div class="catalog-tags__item"> <a href="" class="_active">Ду 500 Ру 10</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 100</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 200</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 300</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 500</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 600</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </div>
+										<div class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 100</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 200</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 300</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 500</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 600</a> </div>
+										<div class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </div>
+										<div class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </div>
 									</div>
-								</ul>
+									<button hidden data-showmore-button type="button" class="block__more">
+										<svg class="icon">
+											<use xlink:href="img/icons/icons.svg#dots"></use>
+										</svg>
+									</button>
+								</div>
 
 								<div class="catalog__right">
 									<div class="catalog__filter-button">
@@ -1355,18 +1356,18 @@
 									<div class="catalog__sorting">
 										<select name="form[]" class="form">
 											<option value="Сначала популярные" selected>Сначала популярные</option>
-											<option value="По цене ↑">По цене ↑</option>
-											<option value="По цене ↓">По цене ↓</option>
+											<option data-href="#" value="По цене ↑">По цене ↑</option>
+											<option data-href="#" value="По цене ↓">По цене ↓</option>
 										</select>
 									</div>
 
 									<div class="catalog__view">
-										<a href="" class="show-type show-type_list">
+										<a href="catalog2.html" class="show-type show-type_list _active">
 											<svg class="icon">
 												<use xlink:href="img/icons/icons.svg#list"></use>
 											</svg>
 										</a>
-										<a href="" class="show-type show-type_cards _active">
+										<a href="catalog1.html" class="show-type show-type_cards">
 											<svg class="icon">
 												<use xlink:href="img/icons/icons.svg#category"></use>
 											</svg>
@@ -1383,50 +1384,597 @@
 												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
 											</a>
 
-											<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
 
-											<div class="product-item__info">
-												<div class="product-item__code">
-													<svg class="icon">
-														<use xlink:href="img/icons/icons.svg#flag"></use>
-													</svg>
-
-													<span>код товара: 1549</span>
-												</div>
-
-												<div class="product-item__art">Арт:&nbsp;930185400</div>
-											</div>
-
-											<div class="product-item__price price">
-												<div class="price__current">292 000 ₽</div>
-												<div class="price__old">370 000 ₽</div>
-											</div>
-
-											<div class="product-item__footer">
-												<div class="product-item__actions">
-													<div class="product-item__action product-item__action_compare">
+												<div class="product-item__info">
+													<div class="product-item__code">
 														<svg class="icon">
-															<use xlink:href="img/icons/icons.svg#compare"></use>
+															<use xlink:href="img/icons/icons.svg#flag"></use>
 														</svg>
+
+														<span>код товара: 1549</span>
 													</div>
-													<div class="product-item__action product-item__action_wishlist">
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
 														<svg class="icon">
-															<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															<use xlink:href="img/icons/icons.svg#check"></use>
 														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_green">new</div>
 													</div>
 												</div>
+											</div>
 
-												<div class="product-item__buy">
-													<div class="product-item__button">Купить</div>
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
 
-													<div class="product-item__quantity">
-														<div class="quantity" data-quantity="">
-															<button type="button" class="quantity__button quantity__button_minus" data-quantity-minus=""></button>
-															<div class="quantity__input">
-																<input data-quantity-value="" type="text" name="" value="1" class="">
-															</div>
-															<button type="button" class="quantity__button quantity__button_plus" data-quantity-plus=""></button>
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
 														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__labels">
+														<div class="product-item__label label label_yellow">Распродажа</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_primary1">-30%</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<div class="product-item__quantity">
+															<div class="quantity" data-quantity="">
+																<button type="button" class="quantity__button quantity__button_minus" data-quantity-minus=""></button>
+																<div class="quantity__input">
+																	<input data-quantity-value="" type="text" name="" value="1" class="">
+																</div>
+																<button type="button" class="quantity__button quantity__button_plus" data-quantity-plus=""></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_green">new</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_banner">
+									<a href="" class="product-item__wrapper">
+										<div class="product-item__banner">
+											<picture>
+												<source srcset="img/products/product-banner2_desk.webp" media="(min-width: 1279.98px)">
+												<source srcset="img/products/product-banner2_tabl.webp" media="(min-width: 767.98px)">
+												<img src="img/products/product-banner2_mob.webp" alt="" loading="lazy">
+											</picture>
+										</div>
+									</a>
+								</div>
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_green">new</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__labels">
+														<div class="product-item__label label label_yellow">Распродажа</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_primary1">-30%</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<div class="product-item__quantity">
+															<div class="quantity" data-quantity="">
+																<button type="button" class="quantity__button quantity__button_minus" data-quantity-minus=""></button>
+																<div class="quantity__input">
+																	<input data-quantity-value="" type="text" name="" value="1" class="">
+																</div>
+																<button type="button" class="quantity__button quantity__button_plus" data-quantity-plus=""></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+
+													<div class="product-item__labels">
+														<div class="product-item__label label label_green">new</div>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-item product-item_list">
+									<div class="product-item__wrapper">
+										<div class="product-item__row">
+											<a href="" class="product-item__preview">
+												<img src="img/products/product-item1-image1.webp" alt="" loading="lazy">
+											</a>
+
+											<div class="product-item__body">
+												<a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+												<div class="product-item__info">
+													<div class="product-item__code">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#flag"></use>
+														</svg>
+
+														<span>код товара: 1549</span>
+													</div>
+
+													<div class="product-item__art">Арт:&nbsp;930185400</div>
+
+													<div class="product-item__available _color-green">
+														<svg class="icon">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+														<span>В наличии на складе</span>
+													</div>
+												</div>
+											</div>
+
+
+											<div class="product-item__right">
+												<div class="product-item__price price">
+													<div class="price__current">292 000 ₽</div>
+													<div class="price__old">370 000 ₽</div>
+												</div>
+
+												<div class="product-item__footer">
+													<div class="product-item__actions">
+														<div class="product-item__action product-item__action_compare">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#compare"></use>
+															</svg>
+														</div>
+														<div class="product-item__action product-item__action_wishlist">
+															<svg class="icon">
+																<use xlink:href="img/icons/icons.svg#wishlist"></use>
+															</svg>
+														</div>
+													</div>
+
+													<div class="product-item__buy">
+														<a href="" class="product-item__button">Купить</a>
 													</div>
 												</div>
 											</div>
@@ -1721,8 +2269,8 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250129172159"></script>
-	<script src="js/app.min.js?_v=20250129172159"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250130175519"></script>
+	<script src="js/app.min.js?_v=20250130175519"></script>
 </body>
 
 </html>

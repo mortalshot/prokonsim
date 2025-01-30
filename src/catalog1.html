@@ -293,33 +293,34 @@
               </div>
 
               <div class="catalog__heading">
-                <ul class="catalog__tags catalog-tags">
-                  <li class="catalog-tags__item"> <a href="" class="_active">Ду 500 Ру 10</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 100</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 200</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 300</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 400</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 400</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 500</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 600</a> </li>
-                  <li class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </li>
-                  <li class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </li>
-
-
-                  <div class="catalog-tags__more">
-                    <button type="button" class="catalog-tags__button" tabindex="-1">
-                      <svg class="icon">
-                        <use xlink:href="@img/icons/icons.svg#dots"></use>
-                      </svg>
-                    </button>
-
-                    <ul id="dropdown-tags">
-                      <li> <a href="">Ду 400</a> </li>
-                      <li> <a href="">Ду 500</a> </li>
-                      <li> <a href="">Ду 600</a> </li>
-                    </ul>
+                <div data-showmore="items" class="catalog__tags catalog-tags">
+                  <div data-showmore-content="1" class="block__content">
+                    <div class="catalog-tags__item"> <a href="" class="_active">Ду 500 Ру 10</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 100</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 200</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 300</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 500</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 600</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </div>
+                    <div class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 100</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 200</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 300</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 400</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 500</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 600</a> </div>
+                    <div class="catalog-tags__item"> <a href="">Ду 300 Ру 10</a> </div>
+                    <div class="catalog-tags__item"> <a href="">ЛМЗ Семенов</a> </div>
                   </div>
-                </ul>
+                  <button hidden data-showmore-button type="button" class="block__more">
+                    <svg class="icon">
+                      <use xlink:href="@img/icons/icons.svg#dots"></use>
+                    </svg>
+                  </button>
+                </div>
 
                 <div class="catalog__right">
                   <div class="catalog__filter-button">
@@ -334,18 +335,18 @@
                   <div class="catalog__sorting">
                     <select name="form[]" class="form">
                       <option value="Сначала популярные" selected>Сначала популярные</option>
-                      <option value="По цене ↑">По цене ↑</option>
-                      <option value="По цене ↓">По цене ↓</option>
+                      <option data-href="#" value="По цене ↑">По цене ↑</option>
+                      <option data-href="#" value="По цене ↓">По цене ↓</option>
                     </select>
                   </div>
 
                   <div class="catalog__view">
-                    <a href="" class="show-type show-type_list">
+                    <a href="catalog2.html" class="show-type show-type_list">
                       <svg class="icon">
                         <use xlink:href="@img/icons/icons.svg#list"></use>
                       </svg>
                     </a>
-                    <a href="" class="show-type show-type_cards _active">
+                    <a href="catalog1.html" class="show-type show-type_cards _active">
                       <svg class="icon">
                         <use xlink:href="@img/icons/icons.svg#category"></use>
                       </svg>

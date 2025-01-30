@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -185,6 +185,63 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 			},
+
+			// События
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.product-gallery__main')) {
+		const productThumbsSwiper = new Swiper('.product-gallery__thumbs', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      speed: 400,
+
+      // Брейкпоинты
+      /* breakpoints: {
+        767.98: {
+          slidesPerView: 6,
+        },
+      }, */
+
+      // События
+      on: {
+      }
+    });
+
+		new Swiper('.product-gallery__main', {
+			modules: [Thumbs, Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			speed: 800,
+			watchOverflow: true,
+
+			thumbs: {
+        swiper: productThumbsSwiper
+      },
+
+			navigation: {
+				prevEl: document.querySelector('.product-gallery__main .swiper-arrow_prev'),
+				nextEl: document.querySelector('.product-gallery__main .swiper-arrow_next'),
+			},
+
+			// Брейкпоинты
+			/* breakpoints: {
+				768: {
+					slidesPerView: 2.25,
+					spaceBetween: 20,
+				},
+				1280: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			}, */
 
 			// События
 			on: {
