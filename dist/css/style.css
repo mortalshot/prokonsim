@@ -2633,7 +2633,7 @@ video {
   display: flex;
   align-items: center;
   gap: .3125rem;
-  max-width: 63.625rem
+  max-width: 64rem
 }
 .catalog-tags._showmore-active .block__more {
   opacity: 0;
