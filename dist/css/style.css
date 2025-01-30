@@ -2520,7 +2520,7 @@ video {
   gap: 1.25rem
 }
 .catalog .catalog__items_list {
-  grid-template-columns: 1fr
+  grid-template-columns: 1fr!important
 }
 .catalog .product-item_full .product-item__banner {
   aspect-ratio: 360/300
