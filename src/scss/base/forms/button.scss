@@ -19,6 +19,10 @@
 		background-color: $Primary1;
 		color: $White;
 
+		svg {
+			fill: $White;
+		}
+
 		@media (any-hover: hover) {
 			transition: $transition ease opacity 0s;
 			&:hover {
@@ -32,7 +36,7 @@
 		background-color: $Primary2;
 		color: $White;
 
-		svg{ 
+		svg {
 			fill: $White;
 		}
 
@@ -49,6 +53,10 @@
 		font-weight: 500;
 		background-color: $White;
 		color: $Grey1;
+
+		svg {
+			fill: $Grey1;
+		}
 
 		@media (any-hover: hover) {
 			transition: $transition ease all 0s;
@@ -140,6 +148,46 @@
 					fill: $White;
 				}
 			}
+		}
+	}
+
+	// .btn_border-primary2
+	&_border-primary2 {
+		color: $Primary2;
+		border: toRem(1) solid $Primary2;
+
+		svg {
+			fill: $Primary2;
+			transition: $transition ease fill 0s;
+		}
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				background-color: $Primary2;
+				color: $White;
+
+				svg {
+					fill: $White;
+				}
+			}
+		}
+	}
+}
+
+.text-link {
+	font-weight: 500;
+	font-size: toRem(14);
+	line-height: math.div(20, 14);
+	color: $Primary2;
+
+	text-decoration: underline transparent from-font;
+	text-underline-offset: 3px;
+	transition: $transition ease text-decoration 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: underline from-font;
 		}
 	}
 }

@@ -27,6 +27,11 @@ h,
     line-height: math.div(26, 20);
     @include adaptiveValue("font-size", 20, 18);
   }
+  &5 {
+    font-weight: 700;
+    line-height: math.div(26, 20);
+    @include adaptiveValue("font-size", 18, 16, 0, 1024, 375);
+  }
 }
 
 img,
@@ -82,6 +87,7 @@ section,
   }
 
   a {
+    color: $Primary2;
     text-decoration: underline from-font;
     text-underline-offset: 3px;
     transition: $transition ease text-decoration 0s;
@@ -304,6 +310,29 @@ section,
   }
 }
 
+.m {
+  &t {
+    &-0 {
+      margin-top: 0 !important;
+    }
+    &-1 {
+      margin-top: toRem(10) !important;
+    }
+  }
+  &b {
+    &-0 {
+      margin-bottom: 0 !important;
+    }
+    &-1 {
+      margin-bottom: toRem(10) !important;
+    }
+  }
+}
+
+[data-src] {
+  cursor: pointer;
+}
+
 // Анимации при наведении
 [class*="link-"] {
   position: relative;
@@ -379,6 +408,7 @@ section,
   }
 }
 
+// .swiper
 .swiper {
   // .swiper-pagination
   &-pagination {
@@ -424,4 +454,13 @@ section,
       fill: $Grey4;
     }
   }
+}
+
+// .gallery
+.lg-backdrop {
+  background-color: rgba($color: $mainColor, $alpha: 0.4) !important;
+}
+
+.lg-toolbar .lg-icon {
+  color: $White !important;
 }

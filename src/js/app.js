@@ -208,7 +208,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://start-template.ru/modul-prokrutka-k-nuzhnomu-bloku-plavnaya-navigacziya-po-stranicze-chertogi-frilansera-v3-0-0/
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функциональность добавления классов в хеддер при прокрутке
 // Документация: https://start-template.ru/modul-dobavleniya-klassov-v-shapku-pri-prokrutke-straniczy-chertogi-frilansera-v3-0-0/
@@ -227,7 +227,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // ========================================================================================================================================================================================================================================================
 // Масонри сетка ========================================================================================================================================================================================================================================================
