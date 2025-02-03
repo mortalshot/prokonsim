@@ -24,6 +24,25 @@ body::after {
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
+
+	&.popup_cart {
+		padding: 0;
+		.popup__content {
+			border-radius: 0;
+			padding: 0;
+			max-width: 100%;
+		}
+	}
+}
+.popup__close {
+	outline: 0;
+
+	@media (any-hover: hover) {
+		transition: $transition ease transform 0s;
+		&:hover {
+			transform: rotate(180deg);
+		}
+	}
 }
 .popup_show {
 	z-index: 150;

@@ -64,12 +64,7 @@ section,
   }
 
   &:first-child {
-    @media (min-width: $mobile) {
-      @include adaptiveValue("margin-top", 30, 20, 0, 1920, 1024);
-    }
-    @media (max-width: $mobile) {
-      @include adaptiveValue("margin-top", 20, 0, 0, 1024, 375);
-    }
+    @include adaptiveValue("margin-top", 30, 20, 0, 1920, 1024);
   }
 }
 
