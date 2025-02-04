@@ -2465,6 +2465,41 @@
       @include adaptiveValue("margin-bottom", 40, 30, 0, 1024, 375);
     }
   }
+
+  // .single-product__search
+  &__search {
+    font-weight: 500;
+    font-size: toRem(14);
+    line-height: math.div(20, 14);
+    color: $Primary2;
+    display: inline-flex;
+    align-items: center;
+    gap: toRem(10);
+    background-color: #f3f5f7;
+    padding: toRem(10) toRem(15);
+    position: fixed;
+    left: 0;
+    z-index: 4;
+    top: 20%;
+    padding-top: toRem(4);
+    padding-bottom: toRem(4);
+    @include adaptiveValue("min-height", 60, 50, 0, 1024, 375);
+    @include adaptiveValue("font-size", 14, 12, 0, 1024, 375);
+
+    @media (any-hover: hover) {
+      transition: $transition ease color 0s;
+      &:hover {
+        color: $Primary1;
+      }
+    }
+
+    svg {
+      flex: 0 0 toRem(20);
+      width: toRem(20);
+      height: toRem(20);
+      fill: $Grey2;
+    }
+  }
 }
 
 .product-gallery {
@@ -3807,4 +3842,172 @@
   }
 }
 
+// .popup_request     ====================================================================================================
+.popup_request {
+  .popup__content {
+    max-width: toRem(500);
+    border-radius: 0;
+    background-color: $White;
+    padding-bottom: toRem(20);
+    @include adaptiveValue("padding-left", 30, 20, 0, 768, 375);
+    @include adaptiveValue("padding-right", 30, 20, 0, 768, 375);
+  }
+
+  .popup__close {
+    position: absolute;
+    top: toRem(24);
+    right: toRem(24);
+  }
+}
+
+.request {
+  // .request__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    padding-bottom: toRem(20);
+    margin-bottom: toRem(20);
+    border-bottom: toRem(1) solid #e9ebed;
+    text-align: center;
+    @include adaptiveValue("margin-left", -30, -20, 0, 768, 375);
+    @include adaptiveValue("margin-right", -30, -20, 0, 768, 375);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20, 0, 768, 375);
+    }
+  }
+
+  // .request__title
+  &__title {
+    flex: 1;
+    font-weight: 700;
+    font-size: toRem(24);
+    line-height: math.div(32, 24);
+  }
+
+  // .request__text
+  &__text {
+    font-size: toRem(14);
+    line-height: math.div(20, 14);
+    text-align: center;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20, 0, 768, 375);
+    }
+  }
+
+  // .request__form
+  &__form {
+    .form__item {
+      margin-bottom: toRem(15);
+    }
+
+    .input {
+      border-color: #d6dbe0;
+      min-height: toRem(44);
+      padding: toRem(8) toRem(20);
+    }
+
+    .select__title {
+      border-color: #d6dbe0;
+    }
+
+    .select__value {
+      height: toRem(42);
+    }
+
+    .select__options {
+      border-color: #d6dbe0;
+    }
+  }
+
+  // .request__note
+  &__note {
+    font-size: toRem(12);
+    line-height: math.div(18, 12);
+    color: #717a80;
+
+    &:not(:first-child) {
+      margin-top: toRem(5);
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form__privacy {
+    font-size: toRem(12);
+    line-height: math.div(18, 12);
+    color: #717a80;
+    text-align: center;
+    max-width: toRem(440);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: toRem(20);
+  }
+}
+
+// .popup_request     ====================================================================================================
+.popup_filter {
+  padding: 0;
+
+  .popup__wrapper {
+    align-items: flex-start;
+  }
+
+  .popup__content {
+    max-width: toRem(550);
+    border-radius: 0;
+    background-color: $White;
+    padding: 0;
+  }
+
+  .catalog-filter {
+    @media (max-width: toEm(1280)) {
+      position: initial !important;
+      opacity: 1;
+      visibility: visible !important;
+      pointer-events: all !important;
+    }
+  }
+
+  .catalog-filter__wrapper {
+    border: 0;
+    max-width: 100% !important;
+  }
+
+  .catalog-filter__form {
+    padding: 0;
+    border: 0;
+    height: 100vh;
+    min-height: initial !important;
+  }
+
+  .catalog-filter__heading {
+    justify-content: space-between;
+    border-bottom: toRem(1) solid #e9ebed;
+    padding: toRem(25);
+
+    svg {
+      fill: #717a80;
+    }
+  }
+
+  .catalog-filter__inner {
+    padding-left: toRem(25);
+    padding-right: toRem(25);
+  }
+
+  .catalog-filter__footer {
+    display: grid;
+    gap: toRem(10);
+    padding: toRem(15) toRem(25);
+    background-color: #f3f5f7;
+
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
 //====================================================================================================

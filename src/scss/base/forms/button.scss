@@ -55,6 +55,7 @@
 		color: $Grey1;
 
 		svg {
+			transition: $transition ease fill 0s;
 			fill: $Grey1;
 		}
 
@@ -63,6 +64,10 @@
 			&:hover {
 				color: $White;
 				background-color: $Primary1;
+
+				svg {
+					fill: $White;
+				}
 			}
 		}
 	}

@@ -538,7 +538,7 @@
 				display: none;
 			}
 			@media (max-width: $mobile) {
-				& > .menu__button {
+				& > .menu__arrow {
 					display: none;
 
 					& + .menu__arrow {

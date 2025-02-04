@@ -10,8 +10,8 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250203174744">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250203174744">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250204171457">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250204171457">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -243,7 +243,7 @@
 
 						<div class="header-top__right" data-da=".menu__body, 767.98, 2">
 							<a href="" class="header-top__feedback">Обратная связь</a>
-							<a href="" class="header-top__request">Заказать звонок</a>
+							<a href="" class="header-top__request" data-popup="#popup-request">Заказать звонок</a>
 						</div>
 					</div>
 				</div>
@@ -1586,6 +1586,14 @@
 						</div>
 					</div>
 				</div>
+
+				<a href="" class="single-product__search" data-popup="#popup-filter">
+					<svg class="icon">
+						<use xlink:href="img/icons/icons.svg#search"></use>
+					</svg>
+
+					<span>Подбор <br> заглушек</span>
+				</a>
 			</section>
 
 			<div class="useful-links section">
@@ -1808,6 +1816,16 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="feedback" data-lp>
+			<a class="feedback__button" href="#" data-popup="#popup-request">
+				<svg class="icon">
+					<use xlink:href="img/icons/icons.svg#chat"></use>
+				</svg>
+
+				<span></span>
+			</a>
+		</div>
 
 		<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
@@ -2807,9 +2825,306 @@
 			</div>
 		</div>
 
+		<div id="popup-request" aria-hidden="true" class="popup popup_request">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__text">
+						<div class="request">
+							<div class="request__heading">
+								<div class="request__title">sales@proconsim.ru</div>
+
+								<button type="button" class="buy-product__close popup__close" data-close>
+									<svg class="icon">
+										<use xlink:href="img/icons/icons.svg#close"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="request__text">Режим работы ПНД-ПТ 9:00 – 18:00. <br>
+								Или оставьте свои контактные данные, мы свяжемся с вами.</div>
+
+							<form action="#" class="request__form">
+								<div class="form__item">
+									<label for="request-email1" class="form__label">Подменный e-mail</label>
+									<input id="request-email1" type="email" name="form[]" placeholder="E-mail" class="input" required="">
+								</div>
+
+								<div class="form__item">
+									<label for="request-description" class="form__label">Описание</label>
+									<input id="request-description" type="text" name="form[]" placeholder="Описание" class="input">
+								</div>
+
+								<div class="form__item">
+									<label for="request-name" class="form__label">ФИО</label>
+									<input id="request-name" type="text" name="form[]" placeholder="ФИО" class="input">
+								</div>
+
+								<div class="form__item">
+									<label for="request-phone" class="form__label">Контактный телефон <span class="_color-primary1">*</span></label>
+									<input id="request-phone" type="text" name="form[]" placeholder="+7 ( ___ ) ___-__-__" class="input input_phone">
+								</div>
+
+								<div class="form__item">
+									<label for="request-email2" class="form__label">E-mail *</label>
+									<input id="request-email2" type="email" name="form[]" placeholder="" class="input" required="">
+								</div>
+
+								<div class="form__item">
+									<div class="form__label">Выбрать подразделение</div>
+									<select name="form[]" class="form">
+										<option value="" selected>Выбрать</option>
+										<option value="Подразделение 1">Подразделение 1</option>
+										<option value="Подразделение 2">Подразделение 2</option>
+										<option value="Подразделение 3">Подразделение 3</option>
+										<option value="Подразделение 4">Подразделение 4</option>
+									</select>
+								</div>
+
+								<div class="form__item">
+									<div class="form__label">Выбрать файлы</div>
+
+									<div class="upload">
+										<div class="upload__input">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#upload"></use>
+											</svg>
+											<span>Загрузить файлы</span>
+											<input id="request-file" type="file" class="">
+										</div>
+									</div>
+								</div>
+
+								<div class="form__item">
+									<label for="request-comment" class="form__label">Комментарий</label>
+									<textarea id="request-comment" name="form[]" placeholder="" class="input" rows="1"></textarea>
+									<div class="request__note">В пиковые часы нагрузка на наши телефон такова, что к нам трудно дозвонится. Для нас очень важен каждый Клиент, и мы готовы уделить ему столько времени, сколько потребуется. Если вы хотите получить консультацию или сделать заказ, напишите нам. Так вы получите максимально подготовленный ответ.</div>
+								</div>
+
+								<div class="form__submit">
+									<button type="submit" class="btn btn_bg-primary1">Отправить</button>
+									<div class="form__privacy">Нажимая на кнопку «Отправить», вы принимаете условия Публичной оферты</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="popup-filter" aria-hidden="true" class="popup popup_filter">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__text">
+						<div class="catalog__filter catalog-filter">
+							<div class="catalog-filter__wrapper">
+								<form action="#" class="catalog-filter__form form">
+									<div class="catalog-filter__heading">
+										<div class="catalog-filter__caption title-h4">Фильтры <span style="color: #717A80;">клапаны запорные</span></div>
+
+
+										<button type="button" class="popup__close" data-close>
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#close"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div class="catalog-filter__inner">
+										<div class="catalog-filter__range range-slider">
+											<div class="range-slider__caption">Цена, ₽</div>
+
+											<div class="range-slider__inputs">
+												<label class="range-slider__input">
+													<div class="range-slider__label">от</div>
+													<input type="text" id="range-slider1-min" class="range-slider__min" placeholder="">
+												</label>
+
+												<label class="range-slider__input">
+													<div class="range-slider__label">до</div>
+													<input type="text" id="range-slider1-max" class="range-slider__max" placeholder="">
+												</label>
+											</div>
+
+											<div class="range-slider__range" data-min="200000" data-max="1250000" data-start="0, 1100000"></div>
+										</div>
+
+										<div data-spollers class="catalog-filter__spollers spollers">
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Тип установки</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter1" value="Опция 1" class="checkbox__input">
+															<span class="checkbox__label">Опция 1</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter1" value="Опция 2" class="checkbox__input">
+															<span class="checkbox__label">Опция 2</span>
+														</label>
+													</div>
+												</div>
+											</details>
+
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Управление</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter2" value="Опция 1" class="checkbox__input">
+															<span class="checkbox__label">Опция 1</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter2" value="Опция 2" class="checkbox__input">
+															<span class="checkbox__label">Опция 2</span>
+														</label>
+													</div>
+												</div>
+											</details>
+
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Бренд</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter3" value="Опция 1" class="checkbox__input">
+															<span class="checkbox__label">Опция 1</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter3" value="Опция 2" class="checkbox__input">
+															<span class="checkbox__label">Опция 2</span>
+														</label>
+													</div>
+												</div>
+											</details>
+
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Страна-производитель</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Германия" class="checkbox__input">
+															<span class="checkbox__label">Германия</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Италия" class="checkbox__input">
+															<span class="checkbox__label">Италия</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Китай" class="checkbox__input">
+															<span class="checkbox__label">Китай</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Россия" class="checkbox__input">
+															<span class="checkbox__label">Россия</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Республика Беларусь" class="checkbox__input">
+															<span class="checkbox__label">Республика Беларусь</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Франция" class="checkbox__input">
+															<span class="checkbox__label">Франция</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Индия" class="checkbox__input">
+															<span class="checkbox__label">Индия</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter4" value="Финляндия" class="checkbox__input">
+															<span class="checkbox__label">Финляндия</span>
+														</label>
+													</div>
+												</div>
+											</details>
+
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Тип</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter5" value="Опция 1" class="checkbox__input">
+															<span class="checkbox__label">Опция 1</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter5" value="Опция 2" class="checkbox__input">
+															<span class="checkbox__label">Опция 2</span>
+														</label>
+													</div>
+												</div>
+											</details>
+
+											<details class="catalog-filter__item spollers__item">
+												<summary class="catalog-filter__title spollers__title">Панель управления</summary>
+
+												<div class="catalog-filter__body spollers__body">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter6" value="Опция 1" class="checkbox__input">
+															<span class="checkbox__label">Опция 1</span>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" name="filter6" value="Опция 2" class="checkbox__input">
+															<span class="checkbox__label">Опция 2</span>
+														</label>
+													</div>
+												</div>
+											</details>
+										</div>
+									</div>
+
+									<div class="catalog-filter__footer">
+										<button type="submit" class="btn btn_bg-primary2">
+											<span>Показать 127 товаров</span>
+										</button>
+
+										<button type="reset" class="btn btn_bg-white">
+											<svg class="icon">
+												<use xlink:href="img/icons/icons.svg#close"></use>
+											</svg>
+
+											<span>Сбросить фильтр</span>
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250203174744"></script>
-	<script src="js/app.min.js?_v=20250203174744"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250204171457"></script>
+	<script src="js/app.min.js?_v=20250204171457"></script>
 </body>
 
 </html>

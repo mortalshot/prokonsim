@@ -1,17 +1,12 @@
 //<FORM>
 // Сниппет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
+	// .form__label
+	&__label {
+		font-weight: 500;
+		font-size: toRem(14);
+		line-height: math.div(20, 14);
+		margin-bottom: toRem(5);
 	}
 }
 //</FORM>
@@ -47,6 +42,10 @@
 // <RANGE>
 // Сниппет (HTML):
 @import "range";
+
+// <upload>
+// Сниппет (HTML):
+@import "upload";
 
 // <CALENDAR>
 // Сниппет (HTML):
