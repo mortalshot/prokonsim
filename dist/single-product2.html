@@ -10,8 +10,8 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250204171457">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250204171457">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20250210142845">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250210142845">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1029,36 +1029,38 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="single-product2">
-				<div class="single-product2__container">
-					<div class="single-product__breadcrumbs breadcrumbs">
-						<div class="breadcrumbs__wrapper">
-							<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-								<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-									<a href="" itemprop="item">
-										<span itemprop="name">Главная</span>
-									</a>
-								</span>
-								<span class="site-breadcrumbs__separator">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#chevron"></use>
-									</svg>
-								</span>
-								<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-									<a href="" itemprop="item">
-										<span itemprop="name">Каталог</span>
-									</a>
-								</span>
-								<span class="site-breadcrumbs__separator">
-									<svg class="icon">
-										<use xlink:href="img/icons/icons.svg#chevron"></use>
-									</svg>
-								</span>
-								<span class="site-breadcrumbs__title">Установки и аксессуары</span>
-							</div>
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<div class="breadcrumbs__wrapper">
+						<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+							<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+								<a href="" itemprop="item">
+									<span itemprop="name">Главная</span>
+								</a>
+							</span>
+							<span class="site-breadcrumbs__separator">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#chevron"></use>
+								</svg>
+							</span>
+							<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+								<a href="" itemprop="item">
+									<span itemprop="name">Каталог</span>
+								</a>
+							</span>
+							<span class="site-breadcrumbs__separator">
+								<svg class="icon">
+									<use xlink:href="img/icons/icons.svg#chevron"></use>
+								</svg>
+							</span>
+							<span class="site-breadcrumbs__title">Установки и аксессуары</span>
 						</div>
 					</div>
+				</div>
+			</div>
 
+			<section class="single-product2">
+				<div class="single-product2__container">
 					<h1 class="single-product__name">Вентиль стальной 15с22нж фланцевый СибЗТА</h1>
 
 					<div class="single-product2__scheme">
@@ -2846,7 +2848,7 @@
 							<form action="#" class="request__form">
 								<div class="form__item">
 									<label for="request-email1" class="form__label">Подменный e-mail</label>
-									<input id="request-email1" type="email" name="form[]" placeholder="E-mail" class="input" required="">
+									<input id="request-email1" type="email" data-validate data-error="Пожалуйста, заполните это поле" data-required="email" name="form[]" placeholder="E-mail" class="input" required="">
 								</div>
 
 								<div class="form__item">
@@ -3123,8 +3125,8 @@
 		</div>
 
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250204171457"></script>
-	<script src="js/app.min.js?_v=20250204171457"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20250210142845"></script>
+	<script src="js/app.min.js?_v=20250210142845"></script>
 </body>
 
 </html>

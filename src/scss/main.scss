@@ -760,6 +760,12 @@
     justify-content: center;
     line-height: math.div(22, 16);
     width: toRem(200);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: url(../img/icons/button-rect-hover.svg) no-repeat;
+      }
+    }
   }
 
   // .product-item_banner
@@ -1460,6 +1466,10 @@
 }
 
 // .catalog     ====================================================================================================
+.breadcrumbs_catalog {
+  background-color: $Grey9;
+}
+
 .catalog {
   background-color: $Grey9;
 
@@ -1473,13 +1483,6 @@
 
   // .catalog__container
   &__container {
-  }
-
-  // .catalog__breadcrumbs
-  &__breadcrumbs {
-    &:not(:last-child) {
-      margin-bottom: toRem(15);
-    }
   }
 
   // .catalog__title
@@ -1797,13 +1800,13 @@
     flex-direction: column;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
+    scrollbar-color: #929aa1 #e9ebed;
 
     @media (max-width: toEm(1280)) {
       min-height: 100vh;
     }
     &::-webkit-scrollbar {
-      width: 0;
+      width: toRem(5);
       height: 0;
     }
   }
@@ -2196,13 +2199,6 @@
   &__container {
   }
 
-  // .single-product__breadcrumbs
-  &__breadcrumbs {
-    &:not(:last-child) {
-      margin-bottom: toRem(20);
-    }
-  }
-
   // .single-product__name
   &__name {
     line-height: math.div(46, 36);
@@ -2483,11 +2479,16 @@
     top: 20%;
     padding-top: toRem(4);
     padding-bottom: toRem(4);
+    transform: translateX(-100%);
     @include adaptiveValue("min-height", 60, 50, 0, 1024, 375);
     @include adaptiveValue("font-size", 14, 12, 0, 1024, 375);
 
+    &._show {
+      transform: translateX(0);
+    }
+
     @media (any-hover: hover) {
-      transition: $transition ease color 0s;
+      transition: $transition ease all 0s;
       &:hover {
         color: $Primary1;
       }
@@ -3982,6 +3983,7 @@
     border: 0;
     height: 100vh;
     min-height: initial !important;
+    padding-bottom: toRem(98);
   }
 
   .catalog-filter__heading {
@@ -4004,6 +4006,9 @@
     gap: toRem(10);
     padding: toRem(15) toRem(25);
     background-color: #f3f5f7;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
     @media (min-width: $mobileSmall) {
       grid-template-columns: repeat(2, 1fr);

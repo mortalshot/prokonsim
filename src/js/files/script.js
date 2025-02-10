@@ -178,4 +178,11 @@ function noUiSliderInit() {
 window.addEventListener("load", function (e) {
   // Запуск инициализации noUiSlider
   noUiSliderInit();
+
+  const productSearch = this.document.querySelector('.single-product__search');
+  if (productSearch) {
+    setTimeout(() => {
+      productSearch.classList.add('_show');
+    }, 1000);
+  }
 });

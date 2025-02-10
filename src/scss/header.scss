@@ -659,6 +659,11 @@
 
 	// .header-catalog__button
 	&__button {
+		transition: $transition ease all 0s;
+		
+		._catalog-show & {
+			background-color: #1a73e8;
+		}
 	}
 
 	// .header-catalog__button-icon

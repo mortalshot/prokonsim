@@ -277,6 +277,16 @@ section,
   }
 }
 
+.breadcrumbs {
+  padding-top: toRem(20);
+  padding-bottom: toRem(15);
+
+  & + section {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
 .site-breadcrumbs {
   color: $Grey3;
   font-size: toRem(14);

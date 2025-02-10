@@ -213,7 +213,7 @@ export function formSubmit() {
 			}
 		}));
 		// Попап показывает, если подключен модуль попапов
-// и для формы указана настройка
+		// и для формы указана настройка
 		setTimeout(() => {
 			if (flsModules.popup) {
 				const popup = form.dataset.popupMessage;
