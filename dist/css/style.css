@@ -1142,7 +1142,7 @@ video {
 }
 .breadcrumbs + section {
   margin-top: 0;
-  padding-top: 0
+  padding-top: 0!important
 }
 .site-breadcrumbs {
   color: #77787b;
