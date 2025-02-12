@@ -1982,7 +1982,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: toRem(-2.5);
+    gap: toRem(5);
   }
 
   .block__more {
@@ -2007,7 +2007,6 @@
 
   // .catalog-tags__item
   &__item {
-    padding: toRem(2.5);
 
     a {
       min-height: toRem(40);
