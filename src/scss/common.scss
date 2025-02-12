@@ -279,11 +279,23 @@ section,
 
 .breadcrumbs {
   padding-top: toRem(20);
-  padding-bottom: toRem(15);
+  padding-bottom: toRem(20);
 
   & + section {
     margin-top: 0;
     padding-top: 0 !important;
+  }
+
+  // .breadcrumbs__title
+  &__title {
+    line-height: math.div(46, 36);
+    
+    @media (min-width: $tablet) {
+      @include adaptiveValue("font-size", 36, 32, 0, 1920, 1024);
+    }
+    @media (max-width: $tablet) {
+      @include adaptiveValue("font-size", 32, 24, 0, 1024, 375);
+    }
   }
 }
 
@@ -294,6 +306,10 @@ section,
   display: flex;
   align-items: center;
   gap: toRem(5);
+
+  &:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
 
   // .site-breadcrumbs__link
   &__link {
