@@ -1983,12 +1983,15 @@
     align-items: center;
     flex-wrap: wrap;
     gap: toRem(5);
+    flex: 0 0 100%;
+    padding-right: toRem(40);
   }
 
   .block__more {
     padding: toRem(8);
     margin: 0 !important;
     transition: $transition ease all 0s;
+    transform: translateX(-100%);
 
     @media (any-hover: hover) {
       &:hover {
@@ -2007,7 +2010,6 @@
 
   // .catalog-tags__item
   &__item {
-
     a {
       min-height: toRem(40);
       padding: toRem(10) toRem(15);
@@ -2292,12 +2294,14 @@
 
     .block__content {
       gap: toRem(4);
-      margin: toRem(-0);
+      padding-right: 0;
+    }
+
+    .block__more {
+      transform: translate(0);
     }
 
     .catalog-tags__item {
-      padding: toRem(0);
-
       a {
         min-height: toRem(36);
         color: $Grey1;
