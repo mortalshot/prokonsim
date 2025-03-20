@@ -519,7 +519,7 @@
     .tabs__navigation {
       overflow-x: auto;
       overflow-y: hidden;
-      scrollbar-width: thin;
+      scrollbar-width: none;
       scrollbar-color: transparent transparent;
 
       @media (min-width: $tablet) {

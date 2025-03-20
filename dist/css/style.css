@@ -2132,7 +2132,7 @@ video {
 .widget-products__tabs .tabs__navigation {
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: transparent transparent
 }
 .widget-products__tabs .tabs__navigation::-webkit-scrollbar {
@@ -4842,6 +4842,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     min-height: 41.25rem;
     display: none
   }
+  .header-catalog__menu {
+    height: 38.75rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin
+  }
   .header-catalog__menu > .header-catalog__title {
     display: none
   }
@@ -4863,7 +4869,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     left: 33.8983050847%;
     width: 100%;
     max-width: 66.1016949153%;
-    min-height: 38.75rem
+    height: 38.75rem
   }
   ._active .header-catalog__scheme {
     display: grid!important;
@@ -6290,6 +6296,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: grid;
     align-content: flex-start;
     row-gap: 1.25rem
+  }
+  .header-catalog._catalog-show {
+    z-index: 10
   }
   .header-catalog__wrapper {
     top: 0;

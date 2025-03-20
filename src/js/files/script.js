@@ -71,6 +71,11 @@ document.addEventListener('click', function (e) {
     if (window.innerWidth >= 767.98) {
       removeClasses(document.querySelectorAll('.header-catalog__card._active'), "_active");
       parent.classList.add('_active');
+      const menu = targetElement.closest('.header-catalog__menu');
+      menu.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
     } else {
       parent.classList.add('_card-show');
     }

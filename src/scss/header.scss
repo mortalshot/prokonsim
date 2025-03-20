@@ -657,10 +657,16 @@
 	position: relative;
 	z-index: 1;
 
+	&._catalog-show {
+		@media (max-width: $mobile) {
+			z-index: 10;
+		}
+	}
+
 	// .header-catalog__button
 	&__button {
 		transition: $transition ease all 0s;
-		
+
 		._catalog-show & {
 			background-color: #1a73e8;
 		}
@@ -742,6 +748,12 @@
 	&__menu {
 		position: relative;
 
+		@media (min-width: $mobile) {
+			height: toRem(620);
+			overflow-y: auto;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+		}
 		@media (max-width: $mobile) {
 			padding-bottom: toRem(20);
 		}
@@ -853,7 +865,8 @@
 			left: percent(480, 1416);
 			width: 100%;
 			max-width: percent(936, 1416);
-			min-height: toRem(620);
+			// min-height: toRem(620);
+			height: toRem(620);
 
 			._active & {
 				display: grid !important;
