@@ -156,6 +156,29 @@
 		}
 	}
 
+	// .btn_border-grey6
+	&_border-grey6 {
+		color: $Grey3;
+		border: toRem(1) solid $Grey6;
+
+		svg {
+			fill: $Grey3;
+			transition: $transition ease fill 0s;
+		}
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				background-color: $Primary2;
+				color: $White;
+
+				svg {
+					fill: $White;
+				}
+			}
+		}
+	}
+
 	// .btn_border-primary2
 	&_border-primary2 {
 		color: $Primary2;

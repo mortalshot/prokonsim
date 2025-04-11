@@ -674,30 +674,48 @@
 
 	// .header-catalog__button-icon
 	&__button-icon {
-		width: toRem(20);
-		flex: 0 0 toRem(20);
+		width: toRem(16);
+		flex: 0 0 toRem(16);
+		height: toRem(12);
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		img {
+		span,
+		&::before,
+		&::after {
+			content: "";
+			right: 0;
 			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: $White;
+			border-radius: toRem(10);
 			transition: $transition ease all 0s;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
 
-			&:last-child {
-				opacity: 0;
+		._catalog-show & {
+			span {
+				width: 0;
 			}
 
-			._catalog-show & {
-				transform: rotate(180deg);
-
-				&:first-child {
-					opacity: 0;
-				}
-				&:last-child {
-					opacity: 1;
-				}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
 			}
 		}
 	}
@@ -1109,6 +1127,14 @@
 	&__item {
 	}
 
+	// .header-contacts__button
+	&__button {
+		font-size: toRem(14);
+		line-height: math.div(20, 14);
+		padding: toRem(8) toRem(28);
+		min-height: toRem(46);
+	}
+
 	// .header-contacts__main
 	&__main {
 		display: flex;
@@ -1225,6 +1251,7 @@
 .action-item {
 	display: grid;
 	align-content: flex-start;
+	justify-items: center;
 	row-gap: toRem(2);
 
 	@media (any-hover: hover) {
@@ -1237,9 +1264,10 @@
 
 	// .action-item__icon
 	&__icon {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		position: relative;
 
 		svg {
 			flex: 0 0 toRem(24);
@@ -1260,6 +1288,26 @@
 		@media (min-width: $tablet) {
 			display: none;
 		}
+	}
+
+	// .action-item__amount
+	&__amount {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(calc(100% + toRem(1)), -50%);
+		font-size: toRem(10);
+		line-height: 1;
+		text-align: center;
+		border-radius: 50%;
+		width: toRem(16);
+		height: toRem(16);
+		flex: 0 0 toRem(16);
+		background-color: $Primary1;
+		color: $White;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 

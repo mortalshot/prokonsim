@@ -277,6 +277,14 @@ section,
   }
 }
 
+._font-medium {
+  font-weight: 500;
+}
+
+._nowrap {
+  white-space: nowrap;
+}
+
 .breadcrumbs {
   padding-top: toRem(20);
   padding-bottom: toRem(20);
@@ -289,7 +297,7 @@ section,
   // .breadcrumbs__title
   &__title {
     line-height: math.div(46, 36);
-    
+
     @media (min-width: $tablet) {
       @include adaptiveValue("font-size", 36, 32, 0, 1920, 1024);
     }

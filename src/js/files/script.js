@@ -19,8 +19,12 @@ document.addEventListener('click', function (e) {
 
     if (targetElement.classList.contains('header-contacts__more') || targetElement.closest('.header-contacts__more')) {
       const parent = targetElement.closest('.header-contacts__item');
-      parent.classList.add('_active');
+      if (document.querySelector('.header-contacts__item._active'))
+        parent.classList.remove('_active');
+      else
+        parent.classList.add('_active');
     }
+
     if (!targetElement.closest('.header-contacts__item') && document.querySelector('.header-contacts__item._active')) {
       document.querySelector('.header-contacts__item._active').classList.remove('_active');
     }
@@ -30,11 +34,22 @@ document.addEventListener('click', function (e) {
     if (targetElement.closest('.menu__button')) {
       e.preventDefault();
       const arrowParent = targetElement.closest('.menu__item');
-      arrowParent.classList.add('_hover');
+      arrowParent.classList.toggle('_hover');
+      const list = arrowParent.querySelector('.menu__sub-list');
+      _slideToggle(list);
     }
+
     if (targetElement.closest('.menu__close')) {
       const arrowParent = targetElement.closest('.menu__item');
       arrowParent.classList.remove('_hover');
+    }
+
+    if (targetElement.classList.contains('header-contacts__more') || targetElement.closest('.header-contacts__more')) {
+      const parent = targetElement.closest('.header-contacts__item');
+      if (document.querySelector('.header-contacts__item._active'))
+        parent.classList.remove('_active');
+      else
+        parent.classList.add('_active');
     }
 
     if (targetElement.classList.contains('menu__arrow') || targetElement.closest('.menu__arrow')) {
@@ -71,11 +86,6 @@ document.addEventListener('click', function (e) {
     if (window.innerWidth >= 767.98) {
       removeClasses(document.querySelectorAll('.header-catalog__card._active'), "_active");
       parent.classList.add('_active');
-      const menu = targetElement.closest('.header-catalog__menu');
-      menu.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
     } else {
       parent.classList.add('_card-show');
     }
@@ -101,6 +111,14 @@ document.addEventListener('click', function (e) {
 
   if (targetElement.classList.contains('product-item__action') || targetElement.closest('.product-item__action')) {
     e.preventDefault();
+  }
+
+  if (targetElement.classList.contains('catalog-menu__item') || targetElement.closest('.catalog-menu__item')) {
+    const parent = targetElement.closest('.catalog-menu__item');
+    removeClasses(document.querySelectorAll('.catalog-menu__item._active'), "_active");
+    parent.classList.add('_active');
+  } else {
+    removeClasses(document.querySelectorAll('.catalog-menu__item._active'), "_active");
   }
 })
 
@@ -134,6 +152,30 @@ if (headerBottomRow) {
     calcHeaderLeftIndent(headerBottomRow);
   })
 }
+
+if (document.querySelector('.personal__text .table')) {
+  const tableItems = document.querySelectorAll('[data-id]');
+  if (tableItems.length > 0) {
+    tableItems.forEach(element => {
+      _slideUp(element, 0);
+    });
+  }
+
+  const tableButtons = document.querySelectorAll('[data-link]');
+  if (tableButtons.length > 0) {
+    tableButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        button.classList.toggle('_active');
+        const dataLinkValue = button.getAttribute('data-link');
+        const matchedElements = document.querySelectorAll(`[data-id="${dataLinkValue}"]`);
+        matchedElements.forEach(matchedElement => {
+          _slideToggle(matchedElement, 0);
+        });
+      })
+    });
+  }
+}
+
 // Работа с noUiSlider
 function noUiSliderInit() {
   var sliders = document.querySelectorAll('.range-slider__range');
@@ -168,6 +210,15 @@ function noUiSliderInit() {
           maxInputs[index].value = formatValue(value, prefix);
         }
       });
+      rangeSlider.on('change', function (values, handle) {
+        var event = new Event("change");
+        if (handle === 0) {
+          minInputs[index].dispatchEvent(event);
+        } else {
+          maxInputs[index].dispatchEvent(event);
+        }
+
+      });
 
       minInputs[index].addEventListener('change', function () {
         rangeSlider.set([this.value.replace(prefix, ''), null]);
@@ -179,6 +230,7 @@ function noUiSliderInit() {
     });
   }
 }
+window.noUiSliderInit = noUiSliderInit;
 
 window.addEventListener("load", function (e) {
   // Запуск инициализации noUiSlider

@@ -8,7 +8,7 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
-      <div class="breadcrumbs breadcrumbs_catalog">
+      <div class="breadcrumbs breadcrumbs_grey">
         <div class="breadcrumbs__container">
           <div class="breadcrumbs__wrapper">
             <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
@@ -43,256 +43,308 @@
       <section class="catalog section-bg">
         <div class="catalog__container">
           <div class="catalog__scheme">
-            <div class="catalog__filter catalog-filter">
-              <div class="catalog-filter__wrapper">
-                <form action="#" class="catalog-filter__form form">
-                  <div class="catalog-filter__heading">
-                    <div class="catalog-filter__caption title-h4">Фильтры</div>
-                    <div class="catalog-filter__reset">
-                      <button type="reset">Сбросить</button>
+            <aside class="catalog__sidebar">
+              <div class="catalog__filter catalog-filter">
+                <div class="catalog-filter__wrapper">
+                  <form action="#" class="catalog-filter__form form">
+                    <div class="catalog-filter__heading">
+                      <div class="catalog-filter__caption title-h4">Фильтры</div>
+                      <div class="catalog-filter__reset">
+                        <button type="reset">Сбросить</button>
+                      </div>
+                      <div class="catalog-filter__close">
+                        <svg class="icon">
+                          <use xlink:href="@img/icons/icons.svg#close"></use>
+                        </svg>
+                      </div>
                     </div>
-                    <div class="catalog-filter__close">
-                      <svg class="icon">
-                        <use xlink:href="@img/icons/icons.svg#close"></use>
-                      </svg>
-                    </div>
-                  </div>
 
-                  <div class="catalog-filter__inner">
-                    <div class="catalog-filter__range range-slider">
-                      <div class="range-slider__caption">Цена, ₽</div>
+                    <div class="catalog-filter__inner">
+                      <div class="catalog-filter__range range-slider">
+                        <div class="range-slider__caption">Цена, ₽</div>
 
-                      <div class="range-slider__inputs">
-                        <label class="range-slider__input">
-                          <div class="range-slider__label">от</div>
-                          <input type="text" id="range-slider1-min" class="range-slider__min" placeholder="">
-                        </label>
+                        <div class="range-slider__inputs">
+                          <label class="range-slider__input">
+                            <div class="range-slider__label">от</div>
+                            <input type="text" id="range-slider1-min" class="range-slider__min" placeholder="">
+                          </label>
 
-                        <label class="range-slider__input">
-                          <div class="range-slider__label">до</div>
-                          <input type="text" id="range-slider1-max" class="range-slider__max" placeholder="">
-                        </label>
+                          <label class="range-slider__input">
+                            <div class="range-slider__label">до</div>
+                            <input type="text" id="range-slider1-max" class="range-slider__max" placeholder="">
+                          </label>
+                        </div>
+
+                        <div class="range-slider__range" data-min="200000" data-max="1250000" data-start="0, 1100000"></div>
                       </div>
 
-                      <div class="range-slider__range" data-min="200000" data-max="1250000" data-start="0, 1100000"></div>
+                      <div data-spollers class="catalog-filter__spollers spollers">
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Тип установки</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter1" value="Опция 1" class="checkbox__input">
+                                <span class="checkbox__label">Опция 1</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter1" value="Опция 2" class="checkbox__input">
+                                <span class="checkbox__label">Опция 2</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Управление</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter2" value="Опция 1" class="checkbox__input">
+                                <span class="checkbox__label">Опция 1</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter2" value="Опция 2" class="checkbox__input">
+                                <span class="checkbox__label">Опция 2</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Бренд</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter3" value="Опция 1" class="checkbox__input">
+                                <span class="checkbox__label">Опция 1</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter3" value="Опция 2" class="checkbox__input">
+                                <span class="checkbox__label">Опция 2</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Страна-производитель</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Германия" class="checkbox__input">
+                                <span class="checkbox__label">Германия</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Италия" class="checkbox__input">
+                                <span class="checkbox__label">Италия</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Китай" class="checkbox__input">
+                                <span class="checkbox__label">Китай</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Россия" class="checkbox__input">
+                                <span class="checkbox__label">Россия</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Республика Беларусь" class="checkbox__input">
+                                <span class="checkbox__label">Республика Беларусь</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Франция" class="checkbox__input">
+                                <span class="checkbox__label">Франция</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Индия" class="checkbox__input">
+                                <span class="checkbox__label">Индия</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter4" value="Финляндия" class="checkbox__input">
+                                <span class="checkbox__label">Финляндия</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Тип</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter5" value="Опция 1" class="checkbox__input">
+                                <span class="checkbox__label">Опция 1</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter5" value="Опция 2" class="checkbox__input">
+                                <span class="checkbox__label">Опция 2</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+
+                        <details class="catalog-filter__item spollers__item">
+                          <summary class="catalog-filter__title spollers__title">Панель управления</summary>
+
+                          <div class="catalog-filter__body spollers__body">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter6" value="Опция 1" class="checkbox__input">
+                                <span class="checkbox__label">Опция 1</span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="filter6" value="Опция 2" class="checkbox__input">
+                                <span class="checkbox__label">Опция 2</span>
+                              </label>
+                            </div>
+                          </div>
+                        </details>
+                      </div>
                     </div>
 
-                    <div data-spollers class="catalog-filter__spollers spollers">
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Тип установки</summary>
+                    <div class="catalog-filter__footer">
+                      <button type="reset" class="btn btn_bg-grey8">
+                        <svg class="icon">
+                          <use xlink:href="@img/icons/icons.svg#close"></use>
+                        </svg>
 
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter1" value="Опция 1" class="checkbox__input">
-                              <span class="checkbox__label">Опция 1</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter1" value="Опция 2" class="checkbox__input">
-                              <span class="checkbox__label">Опция 2</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
-
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Управление</summary>
-
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter2" value="Опция 1" class="checkbox__input">
-                              <span class="checkbox__label">Опция 1</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter2" value="Опция 2" class="checkbox__input">
-                              <span class="checkbox__label">Опция 2</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
-
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Бренд</summary>
-
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter3" value="Опция 1" class="checkbox__input">
-                              <span class="checkbox__label">Опция 1</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter3" value="Опция 2" class="checkbox__input">
-                              <span class="checkbox__label">Опция 2</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
-
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Страна-производитель</summary>
-
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Германия" class="checkbox__input">
-                              <span class="checkbox__label">Германия</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Италия" class="checkbox__input">
-                              <span class="checkbox__label">Италия</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Китай" class="checkbox__input">
-                              <span class="checkbox__label">Китай</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Россия" class="checkbox__input">
-                              <span class="checkbox__label">Россия</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Республика Беларусь" class="checkbox__input">
-                              <span class="checkbox__label">Республика Беларусь</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Франция" class="checkbox__input">
-                              <span class="checkbox__label">Франция</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Индия" class="checkbox__input">
-                              <span class="checkbox__label">Индия</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter4" value="Финляндия" class="checkbox__input">
-                              <span class="checkbox__label">Финляндия</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
-
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Тип</summary>
-
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter5" value="Опция 1" class="checkbox__input">
-                              <span class="checkbox__label">Опция 1</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter5" value="Опция 2" class="checkbox__input">
-                              <span class="checkbox__label">Опция 2</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
-
-                      <details class="catalog-filter__item spollers__item">
-                        <summary class="catalog-filter__title spollers__title">Панель управления</summary>
-
-                        <div class="catalog-filter__body spollers__body">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter6" value="Опция 1" class="checkbox__input">
-                              <span class="checkbox__label">Опция 1</span>
-                            </label>
-                          </div>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="filter6" value="Опция 2" class="checkbox__input">
-                              <span class="checkbox__label">Опция 2</span>
-                            </label>
-                          </div>
-                        </div>
-                      </details>
+                        <span>Сбросить фильтр</span>
+                      </button>
                     </div>
-                  </div>
-
-                  <div class="catalog-filter__footer">
-                    <button type="reset" class="btn btn_bg-grey8">
-                      <svg class="icon">
-                        <use xlink:href="@img/icons/icons.svg#close"></use>
-                      </svg>
-
-                      <span>Сбросить фильтр</span>
-                    </button>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
-            </div>
+
+              @@include('html/_catalog-menu.htm',{})
+            </aside>
 
             <div class="catalog__main">
-              <div class="catalog__categories">
-                <div class="category-card">
-                  <a href="" class="category-card__wrapper">
-                    <div class="category-card__image">
-                      <img src="@img/products/category-image1.png" alt="" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                      <div class="category-card__caption">Задвижки чугунные</div>
-                      <div class="category-card__num">125 товаров</div>
-                    </div>
-                  </a>
+              <div class="widget-catalog__slider">
+                <div class="swiper-arrow swiper-arrow_prev">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons.svg#arrow"></use>
+                  </svg>
                 </div>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image1.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки чугунные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
+                    </div>
 
-                <div class="category-card">
-                  <a href="" class="category-card__wrapper">
-                    <div class="category-card__image">
-                      <img src="@img/products/category-image2.png" alt="" loading="lazy">
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image2.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки шиберные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
                     </div>
-                    <div class="category-card__body">
-                      <div class="category-card__caption">Задвижки шиберные</div>
-                      <div class="category-card__num">125 товаров</div>
+
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image3.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки стальные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
                     </div>
-                  </a>
+
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image4.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки латунные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image4.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки латунные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image4.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки латунные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="slideCategory   swiper-slide">
+                      <a href="" class="category-card__wrapper">
+                        <div class="category-card__image">
+                          <img src="@img/products/category-image4.png" alt="" loading="lazy">
+                        </div>
+                        <div class="category-card__body">
+                          <div class="category-card__caption">Задвижки латунные</div>
+                          <div class="category-card__num">125 товаров</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-
-                <div class="category-card">
-                  <a href="" class="category-card__wrapper">
-                    <div class="category-card__image">
-                      <img src="@img/products/category-image3.png" alt="" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                      <div class="category-card__caption">Задвижки стальные</div>
-                      <div class="category-card__num">125 товаров</div>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="category-card">
-                  <a href="" class="category-card__wrapper">
-                    <div class="category-card__image">
-                      <img src="@img/products/category-image4.png" alt="" loading="lazy">
-                    </div>
-                    <div class="category-card__body">
-                      <div class="category-card__caption">Задвижки латунные</div>
-                      <div class="category-card__num">125 товаров</div>
-                    </div>
-                  </a>
+                <div class="swiper-arrow swiper-arrow_next">
+                  <svg class="icon">
+                    <use xlink:href="img/icons/icons.svg#arrow"></use>
+                  </svg>
                 </div>
               </div>
+
 
               <div class="catalog__heading">
                 <div data-showmore="items" class="catalog__tags catalog-tags">

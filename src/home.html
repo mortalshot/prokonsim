@@ -8,579 +8,591 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="main-slider">
-				<div class="main-slider__container">
-					<div class="main-slider__slider swiper">
-						<div class="swiper-arrow swiper-arrow_prev">
-							<svg class="icon">
-								<use xlink:href="@img/icons/icons.svg#arrow"></use>
-							</svg>
-						</div>
+			<div class="block-with-menu">
+				<div class="block-with-menu__container">
+					<div class="block-with-menu__grid">
+						<aside class="block-with-menu__sidebar">
+							@@include('html/_catalog-menu.htm',{})
+						</aside>
 
-						<div class="main-slider__wrapper swiper-wrapper">
-							<div class="main-slider__slide swiper-slide">
-								<div class="main-slider__bg">
-									<img src="@img/main-slider/main-slider-slide1-bg.jpg" alt="" loading="lazy">
-								</div>
-								<div class="main-slider__scheme">
-									<div class="main-slider__body">
-										<div class="main-slider__tag">
-											<img src="@img/main-slider/main-slider-slide1-icon.svg" alt="" loading="lazy">
-											<span>Более 20 000 товаров в наличии</span>
+						<div class="block-with-menu__body">
+							<section class="main-slider">
+								<div class="main-slider__container">
+									<div class="main-slider__slider swiper">
+										<div class="swiper-arrow swiper-arrow_prev">
+											<svg class="icon">
+												<use xlink:href="@img/icons/icons.svg#arrow"></use>
+											</svg>
 										</div>
 
-										<h1 class="main-slider__title">Трубопроводная арматура для&nbsp;водоснабжения, теплоснабжения и канализации</h1>
+										<div class="main-slider__wrapper swiper-wrapper">
+											<div class="main-slider__slide swiper-slide">
+												<div class="main-slider__bg">
+													<img src="@img/main-slider/main-slider-slide1-bg.jpg" alt="" loading="lazy">
+												</div>
+												<div class="main-slider__scheme">
+													<div class="main-slider__body">
+														<div class="main-slider__tag">
+															<img src="@img/main-slider/main-slider-slide1-icon.svg" alt="" loading="lazy">
+															<span>Более 20 000 товаров в наличии</span>
+														</div>
 
-										<div class="main-slider__button">
-											<a href="" class="btn btn_bg-primary1">
-												<span>Перейти в каталог</span>
-												<svg class="icon icon_chevron">
-													<use xlink:href="@img/icons/icons.svg#chevron"></use>
-												</svg>
+														<h1 class="main-slider__title">Трубопроводная арматура для&nbsp;водоснабжения, теплоснабжения и канализации</h1>
+
+														<div class="main-slider__button">
+															<a href="" class="btn btn_bg-primary1">
+																<span>Перейти в каталог</span>
+																<svg class="icon icon_chevron">
+																	<use xlink:href="@img/icons/icons.svg#chevron"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+													<div class="main-slider__image">
+														<img src="@img/main-slider/main-slider-slide1-image.png" alt="" loading="lazy">
+													</div>
+												</div>
+											</div>
+
+											<a href="" class="main-slider__slide swiper-slide">
+												<div class="main-slider__banner">
+													<picture>
+														<source srcset="@img/main-slider/main-slider-slide2-bg_desk.jpg" media="(min-width: 1279.98px)">
+														<source srcset="@img/main-slider/main-slider-slide2-bg_tabl.jpg" media="(min-width: 767.98px)">
+														<img src="@img/main-slider/main-slider-slide2-bg_mob.jpg" alt="" loading="lazy">
+													</picture>
+												</div>
 											</a>
 										</div>
-									</div>
-									<div class="main-slider__image">
-										<img src="@img/main-slider/main-slider-slide1-image.png" alt="" loading="lazy">
+
+										<div class="swiper-arrow swiper-arrow_next">
+											<svg class="icon">
+												<use xlink:href="@img/icons/icons.svg#arrow"></use>
+											</svg>
+										</div>
+
+										<div class="swiper-pagination"></div>
 									</div>
 								</div>
-							</div>
+							</section>
 
-							<a href="" class="main-slider__slide swiper-slide">
-								<div class="main-slider__banner">
-									<picture>
-										<source srcset="@img/main-slider/main-slider-slide2-bg_desk.jpg" media="(min-width: 1279.98px)">
-										<source srcset="@img/main-slider/main-slider-slide2-bg_tabl.jpg" media="(min-width: 767.98px)">
-										<img src="@img/main-slider/main-slider-slide2-bg_mob.jpg" alt="" loading="lazy">
-									</picture>
+							<section class="widget-catalog">
+								<div class="widget-catalog__container">
+									<div class="widget-catalog__heading _heading">
+										<h2 class="widget-catalog__title">Каталог</h2>
+									</div>
+
+									<div class="widget-catalog__cards">
+										<div class="widget-catalog__big">
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<div class="catalog-card__caption">
+															<h3 class="catalog-card__title">Задвижки</h3>
+															<div class="catalog-card__label label label_primary1">-30%</div>
+														</div>
+
+
+														<div class="catalog-card__tag _color-primary1">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image1.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<a href="" class="widget-catalog__card widget-catalog__card_row2 catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Фитинги полимерные для водоснабжения, отопления</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image1.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<div class="widget-catalog__big">
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<h3 class="catalog-card__title">Трубы стальные</h3>
+
+														<div class="catalog-card__tag">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image2.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<h3 class="catalog-card__title">Коллекторные системы</h3>
+
+														<div class="catalog-card__tag">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image3.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="widget-catalog__big">
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<div class="catalog-card__caption">
+															<h3 class="catalog-card__title">Краны латунные</h3>
+															<div class="catalog-card__label label label_green">NEW</div>
+														</div>
+
+														<div class="catalog-card__tag">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image3.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<div class="catalog-card__caption">
+															<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+															<div class="catalog-card__label label label_yellow">Распродажа</div>
+														</div>
+
+														<div class="catalog-card__tag">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image2.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="widget-catalog__big">
+											<a href="" class="widget-catalog__card catalog-card">
+												<div class="catalog-card__wrapper">
+													<div class="catalog-card__heading">
+														<h3 class="catalog-card__title">Клапаны</h3>
+
+														<div class="catalog-card__tag">
+															<svg class="icon">
+																<use xlink:href="@img/icons/icons.svg#tag"></use>
+															</svg>
+
+															<span>от 292 000 ₽</span>
+														</div>
+													</div>
+
+													<div class="catalog-card__image">
+														<img src="@img/products/category-image4.png" alt="" loading="lazy">
+													</div>
+
+													<div class="catalog-card__num">
+														<span>192 товара</span>
+													</div>
+												</div>
+											</a>
+										</div>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="widget-catalog__items">
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+										<a href="" class="widget-catalog__card catalog-card">
+											<div class="catalog-card__wrapper">
+												<div class="catalog-card__heading">
+													<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
+
+													<div class="catalog-card__tag">
+														<svg class="icon">
+															<use xlink:href="@img/icons/icons.svg#tag"></use>
+														</svg>
+
+														<span>от 292 000 ₽</span>
+													</div>
+												</div>
+
+												<div class="catalog-card__image">
+													<img src="@img/products/category-image2.png" alt="" loading="lazy">
+												</div>
+
+												<div class="catalog-card__num">
+													<span>192 товара</span>
+												</div>
+											</div>
+										</a>
+									</div>
 								</div>
-							</a>
+							</section>
 						</div>
-
-						<div class="swiper-arrow swiper-arrow_next">
-							<svg class="icon">
-								<use xlink:href="@img/icons/icons.svg#arrow"></use>
-							</svg>
-						</div>
-
-						<div class="swiper-pagination"></div>
 					</div>
 				</div>
-			</section>
-
-			<section class="widget-catalog">
-				<div class="widget-catalog__container">
-					<div class="widget-catalog__heading _heading">
-						<h2 class="widget-catalog__title">Каталог</h2>
-					</div>
-
-					<div class="widget-catalog__cards">
-						<div class="widget-catalog__big">
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<div class="catalog-card__caption">
-											<h3 class="catalog-card__title">Задвижки</h3>
-											<div class="catalog-card__label label label_primary1">-30%</div>
-										</div>
-
-
-										<div class="catalog-card__tag _color-primary1">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image1.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<a href="" class="widget-catalog__card widget-catalog__card_row2 catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Фитинги полимерные для водоснабжения, отопления</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image1.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<div class="widget-catalog__big">
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<h3 class="catalog-card__title">Трубы стальные</h3>
-
-										<div class="catalog-card__tag">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image2.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<h3 class="catalog-card__title">Коллекторные системы</h3>
-
-										<div class="catalog-card__tag">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image3.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="widget-catalog__big">
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<div class="catalog-card__caption">
-											<h3 class="catalog-card__title">Краны латунные</h3>
-											<div class="catalog-card__label label label_green">NEW</div>
-										</div>
-
-										<div class="catalog-card__tag">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image3.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<div class="catalog-card__caption">
-											<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-											<div class="catalog-card__label label label_yellow">Распродажа</div>
-										</div>
-
-										<div class="catalog-card__tag">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image2.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="widget-catalog__big">
-							<a href="" class="widget-catalog__card catalog-card">
-								<div class="catalog-card__wrapper">
-									<div class="catalog-card__heading">
-										<h3 class="catalog-card__title">Клапаны</h3>
-
-										<div class="catalog-card__tag">
-											<svg class="icon">
-												<use xlink:href="@img/icons/icons.svg#tag"></use>
-											</svg>
-
-											<span>от 292 000 ₽</span>
-										</div>
-									</div>
-
-									<div class="catalog-card__image">
-										<img src="@img/products/category-image4.png" alt="" loading="lazy">
-									</div>
-
-									<div class="catalog-card__num">
-										<span>192 товара</span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="widget-catalog__items">
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-						<a href="" class="widget-catalog__card catalog-card">
-							<div class="catalog-card__wrapper">
-								<div class="catalog-card__heading">
-									<h3 class="catalog-card__title">Детали <br> трубопроводов</h3>
-
-									<div class="catalog-card__tag">
-										<svg class="icon">
-											<use xlink:href="@img/icons/icons.svg#tag"></use>
-										</svg>
-
-										<span>от 292 000 ₽</span>
-									</div>
-								</div>
-
-								<div class="catalog-card__image">
-									<img src="@img/products/category-image2.png" alt="" loading="lazy">
-								</div>
-
-								<div class="catalog-card__num">
-									<span>192 товара</span>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
+			</div>
 
 			<section class="widget-products section-bg">
 				<div data-tabs class="widget-products__tabs tabs">
@@ -970,20 +982,12 @@
 
 				<div data-tabs class="widget-products__tabs tabs">
 					<nav data-tabs-titles class="tabs__navigation _heading">
-						<button type="submit" class="tabs__title _tab-active" data-tabs-title="">Все товары</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Задвижки чугунные</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Задвижки чугунные с обрезиненным клином</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Краны трехходовые для манометра</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Затворы чугунные</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Клапаны балансировочные</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Регуляторы давления</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Клапаны регулирующие с электроприводом</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Электроприводы для задвижек</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Фитинги для труб PEX, PERT и металлопластиковых</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Фасонные части ПП для канализации</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Термометры</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Системы автоматического пожаротушения</button>
-						<button type="submit" class="tabs__title" data-tabs-title="">Опоры стальные</button>
+						<button type="submit" class="tabs__title _tab-active">Все товары</button>
+						<button type="submit" class="tabs__title">Задвижки</button>
+						<button type="submit" class="tabs__title">Краны латунные</button>
+						<button type="submit" class="tabs__title">Трубы стальные</button>
+						<button type="submit" class="tabs__title">Клапаны</button>
+						<button type="submit" class="tabs__title">Затворы дисковые</button>
 					</nav>
 
 					<div data-tabs-body class="tabs__content">
