@@ -19,12 +19,14 @@
 	text-align: left;
 	position: relative;
 	list-style: none;
+	
 	&::marker,
 	&::-webkit-details-marker {
 		display: none;
 	}
 	._spoller-init & {
 		cursor: pointer;
+		padding-right: toRem(16);
 		&::before,
 		&::after {
 			content: "";

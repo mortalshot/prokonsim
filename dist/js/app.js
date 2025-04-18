@@ -10886,22 +10886,24 @@ PERFORMANCE OF THIS SOFTWARE.
             if (targetElement.classList.contains("header-catalog__button") || targetElement.closest(".header-catalog__button")) {
                 const parent = targetElement.closest(".header-catalog");
                 parent.classList.toggle("_catalog-show");
+                if (window.innerWidth <= 767.98) bodyLockToggle();
             }
-            if (!targetElement.closest(".header-catalog") && document.querySelector(".header-catalog._catalog-show")) document.querySelector(".header-catalog._catalog-show").classList.remove("_catalog-show");
-            if (targetElement.closest(".header-catalog__category")) {
-                const parent = targetElement.closest(".header-catalog__card");
-                if (window.innerWidth >= 767.98) {
-                    removeClasses(document.querySelectorAll(".header-catalog__card._active"), "_active");
-                    parent.classList.add("_active");
-                } else parent.classList.add("_card-show");
+            if (!targetElement.closest(".header-catalog") && document.querySelector(".header-catalog._catalog-show")) {
+                document.querySelector(".header-catalog._catalog-show").classList.remove("_catalog-show");
+                bodyUnlock();
             }
             if (targetElement.closest(".header-catalog__close")) {
                 const parent = targetElement.closest(".header-catalog");
                 parent.classList.remove("_catalog-show");
+                bodyUnlock();
+                if (window.innerWidth <= 797.98) {
+                    console.log("qweqwe");
+                    removeClasses(document.querySelectorAll(".header-catalog__scheme._active"), "_active");
+                }
             }
             if (targetElement.closest(".header-catalog__back")) {
-                const parent = targetElement.closest(".header-catalog__card");
-                parent.classList.remove("_card-show");
+                const parent = targetElement.closest(".header-catalog__scheme");
+                parent.classList.remove("_active");
             }
             if (targetElement.classList.contains("catalog__filter-button") || targetElement.closest(".catalog__filter-button") && bodyLockStatus) {
                 e.preventDefault();
@@ -10930,6 +10932,26 @@ PERFORMANCE OF THIS SOFTWARE.
                     _slideDown(document.querySelector("#dropdown-menu"));
                 }), 500);
             }
+        }
+        const headerButtons = document.querySelectorAll(".header-catalog__category");
+        const headerTabs = document.querySelectorAll(".header-catalog__scheme");
+        if (headerButtons.length > 0) {
+            headerButtons.forEach(((button, index) => {
+                button.addEventListener("click", (() => {
+                    headerTabs.forEach((body => body.classList.remove("_active")));
+                    headerButtons.forEach((btn => btn.classList.remove("_active")));
+                    headerTabs[index].classList.add("_active");
+                    button.classList.add("_active");
+                }));
+            }));
+            function handleResize() {
+                if (window.innerWidth < 767.98) {
+                    headerButtons.forEach((t => t.classList.remove("_active")));
+                    headerTabs.forEach((b => b.classList.remove("_active")));
+                }
+            }
+            handleResize();
+            window.addEventListener("resize", handleResize);
         }
         const headerBottomRow = document.querySelector(".header-bottom__row");
         function calcHeaderLeftIndent(headerBottomRow) {

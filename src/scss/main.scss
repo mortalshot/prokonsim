@@ -28,7 +28,7 @@
 
       .catalog-menu {
         position: sticky;
-        top: toRem(140);
+        top: toRem(90);
       }
     }
     @media (max-width: toEm(1280.98)) {
@@ -1090,7 +1090,6 @@
   // .brands-item__logo
   &__logo {
     position: relative;
-    padding-bottom: toRem(60);
 
     &:not(:last-child) {
       margin-bottom: toRem(10);
@@ -4399,7 +4398,7 @@
 
     @media (min-width: $tablet) {
       position: sticky;
-      top: toRem(140);
+      top: toRem(90);
     }
 
     li {
