@@ -1318,7 +1318,7 @@ video {
   font-size: .875rem;
   line-height: 1.4285714286;
   position: relative;
-  z-index: 2
+  z-index: 11
 }
 .header-top__row {
   padding-top: .5625rem;
