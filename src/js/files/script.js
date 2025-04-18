@@ -171,20 +171,34 @@ if (headerButtons.length > 0) {
 }
 
 const headerBottomRow = document.querySelector('.header-bottom__row');
-
 function calcHeaderLeftIndent(headerBottomRow) {
   const headerBottomRowRect = headerBottomRow.getBoundingClientRect();
   const pixelsFromLeft = headerBottomRowRect.left;
   document.querySelector('.header-catalog__wrapper').style.setProperty('--distance-header-to-left', pixelsFromLeft + 'px');
 }
-
 if (headerBottomRow) {
-  document.addEventListener('DOMContentLoaded', function () {
-    calcHeaderLeftIndent(headerBottomRow);
-  })
-  window.addEventListener('resize', function () {
-    calcHeaderLeftIndent(headerBottomRow);
-  })
+  document.addEventListener('DOMContentLoaded', calcHeaderLeftIndent(headerBottomRow))
+  window.addEventListener('resize', calcHeaderLeftIndent(headerBottomRow))
+}
+
+// Вычисляем отступ .header-catalog__wrapper
+const header = document.querySelector('.header');
+const headerCatalogWrapper = document.querySelector('.header-catalog__wrapper');
+
+function calculateVisibleOffsetAndHeight() {
+  const rect = header.getBoundingClientRect();
+
+  let distanceToTop = rect.top;
+  const headerHeight = header.offsetHeight;
+
+  const totalDistance = distanceToTop + headerHeight;
+
+  headerCatalogWrapper.style.setProperty('--distance-header-to-top', totalDistance + 'px');
+}
+
+if (headerCatalogWrapper) {
+  window.addEventListener('scroll', calculateVisibleOffsetAndHeight);
+  calculateVisibleOffsetAndHeight();
 }
 
 if (document.querySelector('.personal__text .table')) {

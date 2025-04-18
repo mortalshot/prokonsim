@@ -5256,7 +5256,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .header-catalog__wrapper {
     padding: 1.25rem;
-    top: 7.8125rem;
+    top: var(--distance-header-to-top);
     display: none
   }
   .header-catalog__menu > .header-catalog__title {
