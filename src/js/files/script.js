@@ -291,3 +291,36 @@ window.addEventListener("load", function (e) {
     }, 1000);
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const productLists = document.querySelectorAll('.product-item__vars');
+
+  if (productLists.length > 0) {
+    productLists.forEach(list => {
+      const maxVisible = parseInt(list.dataset.items, 10);
+      const items = Array.from(list.querySelectorAll('.product-item__var'));
+      const showMoreBtn = list.querySelector('.product-item__more');
+
+      if (!showMoreBtn || items.length <= maxVisible) {
+        // если элементов меньше или равно — ничего не прячем и кнопку удаляем
+        showMoreBtn?.remove();
+        return;
+      }
+
+      // Скрываем лишние
+      for (let i = maxVisible; i < items.length; i++) {
+        items[i].hidden = true;
+      }
+
+      showMoreBtn.addEventListener('click', () => {
+        // Показываем скрытые элементы с анимацией
+        for (let i = maxVisible; i < items.length; i++) {
+          items[i].hidden = false;
+          _slideDown(items[i], 500);
+        }
+        // Удаляем кнопку
+        showMoreBtn.remove();
+      });
+    });
+  }
+});

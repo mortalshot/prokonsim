@@ -11037,6 +11037,26 @@ PERFORMANCE OF THIS SOFTWARE.
                 productSearch.classList.add("_show");
             }), 1e3);
         }));
+        document.addEventListener("DOMContentLoaded", (() => {
+            const productLists = document.querySelectorAll(".product-item__vars");
+            if (productLists.length > 0) productLists.forEach((list => {
+                const maxVisible = parseInt(list.dataset.items, 10);
+                const items = Array.from(list.querySelectorAll(".product-item__var"));
+                const showMoreBtn = list.querySelector(".product-item__more");
+                if (!showMoreBtn || items.length <= maxVisible) {
+                    showMoreBtn?.remove();
+                    return;
+                }
+                for (let i = maxVisible; i < items.length; i++) items[i].hidden = true;
+                showMoreBtn.addEventListener("click", (() => {
+                    for (let i = maxVisible; i < items.length; i++) {
+                        items[i].hidden = false;
+                        _slideDown(items[i], 500);
+                    }
+                    showMoreBtn.remove();
+                }));
+            }));
+        }));
         window["FLS"] = true;
         addLoadedClass();
         menuInit();
