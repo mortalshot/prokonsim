@@ -11057,6 +11057,94 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }));
+        (function initPickup() {
+            document.addEventListener("DOMContentLoaded", (() => {
+                if (typeof ymaps3 === "undefined") {
+                    console.error("Yandex Maps 3.0 не подключён");
+                    return;
+                }
+                ymaps3.ready.then((() => {
+                    const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
+                    const mapEl = document.getElementById("pickup-map");
+                    const list = document.querySelector(".pickup__list");
+                    if (!mapEl || !list) return;
+                    const points = Array.from(list.querySelectorAll(".point"));
+                    if (!points.length) return;
+                    const active = list.querySelector(".point--active") || points[0];
+                    const parseCoords = el => {
+                        const raw = (el?.getAttribute("data-coords") || "").trim();
+                        if (!raw) return null;
+                        const [lng, lat] = raw.split(",").map(Number);
+                        return isFinite(lng) && isFinite(lat) ? [ lng, lat ] : null;
+                    };
+                    const startCoords = parseCoords(active) || [ 37.620393, 55.75396 ];
+                    const startZoom = parseFloat(active?.getAttribute("data-zoom") || "14");
+                    const map = new YMap(mapEl, {
+                        location: {
+                            center: startCoords,
+                            zoom: startZoom
+                        }
+                    }, [ new YMapDefaultSchemeLayer({
+                        theme: "light"
+                    }), new YMapDefaultFeaturesLayer ]);
+                    function selectPoint(li) {
+                        if (!li) return;
+                        points.forEach((p => p.classList.toggle("point--active", p === li)));
+                        points.forEach((p => p._markerEl?.classList.toggle("marker--active", p === li)));
+                        const coords = parseCoords(li);
+                        if (coords) {
+                            const z = parseFloat(li.getAttribute("data-zoom") || startZoom);
+                            map.update({
+                                location: {
+                                    center: coords,
+                                    zoom: z
+                                }
+                            });
+                        }
+                        const addressText = li.querySelector(".point__address")?.textContent?.trim() || "";
+                        const placeEl = document.querySelector(".cart-delivery__place");
+                        placeEl.style.display = "block";
+                        if (placeEl && addressText) placeEl.textContent = addressText;
+                    }
+                    points.forEach((el => {
+                        const coords = parseCoords(el);
+                        if (!coords) return;
+                        const pin = document.createElement("div");
+                        pin.className = "marker";
+                        pin.addEventListener("click", (ev => {
+                            ev.stopPropagation();
+                            selectPoint(el);
+                        }));
+                        const marker = new YMapMarker({
+                            coordinates: coords
+                        }, pin);
+                        el._marker = marker;
+                        el._markerEl = pin;
+                        map.addChild(marker);
+                    }));
+                    points.forEach((p => p._markerEl?.classList.toggle("marker--active", p === active)));
+                    list.addEventListener("click", (e => {
+                        const li = e.target.closest(".point");
+                        if (!li) return;
+                        selectPoint(li);
+                    }));
+                }));
+            }));
+        })();
+        document.addEventListener("DOMContentLoaded", (() => {
+            const items = document.querySelectorAll(".cart-delivery__item");
+            items.forEach((item => {
+                item.addEventListener("click", (e => {
+                    e.preventDefault();
+                    items.forEach((it => {
+                        const input = it.querySelector('.cart-delivery__option input[type="radio"], .cart-delivery__option input[type="checkbox"]');
+                        if (input) input.checked = false;
+                    }));
+                    const currentInput = item.querySelector('.cart-delivery__option input[type="radio"], .cart-delivery__option input[type="checkbox"]');
+                    if (currentInput) currentInput.checked = true;
+                }));
+            }));
+        }));
         window["FLS"] = true;
         addLoadedClass();
         menuInit();

@@ -324,3 +324,123 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Пункты выдачи
+(function initPickup() {
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof ymaps3 === 'undefined') {
+      console.error('Yandex Maps 3.0 не подключён');
+      return;
+    }
+
+    ymaps3.ready.then(() => {
+      const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+
+      const mapEl = document.getElementById('pickup-map');
+      const list = document.querySelector('.pickup__list');
+      if (!mapEl || !list) return;
+
+      const points = Array.from(list.querySelectorAll('.point'));
+      if (!points.length) return;
+
+      const active = list.querySelector('.point--active') || points[0];
+
+      // Внимание: в ymaps3 координаты в формате [lng, lat] (долгота, широта)!
+      const parseCoords = (el) => {
+        const raw = (el?.getAttribute('data-coords') || '').trim();
+        if (!raw) return null;
+        const [lng, lat] = raw.split(',').map(Number);
+        return (isFinite(lng) && isFinite(lat)) ? [lng, lat] : null;
+      };
+
+      const startCoords = parseCoords(active) || [37.620393, 55.75396]; // центр Мск — фолбэк
+      const startZoom = parseFloat(active?.getAttribute('data-zoom') || '14');
+
+      // Инициализация карты
+      const map = new YMap(
+        mapEl,
+        { location: { center: startCoords, zoom: startZoom } },
+        [
+          new YMapDefaultSchemeLayer({ theme: 'light' }),
+          new YMapDefaultFeaturesLayer()
+        ]
+      );
+
+      // Выбор пункта (из списка или по клику на маркер)
+      function selectPoint(li) {
+        if (!li) return;
+
+        // Смена активного элемента списка
+        points.forEach(p => p.classList.toggle('point--active', p === li));
+        // Смена активного маркера
+        points.forEach(p => p._markerEl?.classList.toggle('marker--active', p === li));
+
+        // Перелёт/центрирование к координатам
+        const coords = parseCoords(li);
+        if (coords) {
+          const z = parseFloat(li.getAttribute('data-zoom') || startZoom);
+          map.update({ location: { center: coords, zoom: z } });
+        }
+
+        // Обновляем текст в .cart-delivery__place
+        const addressText = li.querySelector('.point__address')?.textContent?.trim() || '';
+        const placeEl = document.querySelector('.cart-delivery__place');
+        placeEl.style.display = "block";
+        if (placeEl && addressText) {
+          placeEl.textContent = addressText;
+        }
+      }
+
+      // Создание маркеров для всех точек
+      points.forEach((el) => {
+        const coords = parseCoords(el);
+        if (!coords) return;
+
+        const pin = document.createElement('div');
+        pin.className = 'marker'; // стилизуешь в CSS (.marker и .marker--active)
+
+        // Клик по маркеру — выбираем соответствующий пункт
+        pin.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+          selectPoint(el);
+        });
+
+        const marker = new YMapMarker({ coordinates: coords }, pin);
+        el._marker = marker;  // ссылка на объект маркера (если пригодится)
+        el._markerEl = pin;     // DOM-элемент маркера — для переключения класса
+        map.addChild(marker);
+      });
+
+      // Активное состояние на старте
+      points.forEach(p => p._markerEl?.classList.toggle('marker--active', p === active));
+
+      // Клики по списку — выбирают точку
+      list.addEventListener('click', (e) => {
+        const li = e.target.closest('.point');
+        if (!li) return;
+        selectPoint(li);
+      });
+    });
+  });
+})();
+
+// Выбираем доставку
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.cart-delivery__item');
+
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault(); // чтобы не было лишних триггеров, если внутри label/ссылки
+
+      // снимаем checked у всех
+      items.forEach(it => {
+        const input = it.querySelector('.cart-delivery__option input[type="radio"], .cart-delivery__option input[type="checkbox"]');
+        if (input) input.checked = false;
+      });
+
+      // ставим checked у текущего
+      const currentInput = item.querySelector('.cart-delivery__option input[type="radio"], .cart-delivery__option input[type="checkbox"]');
+      if (currentInput) currentInput.checked = true;
+    });
+  });
+});

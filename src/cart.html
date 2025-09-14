@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформить заказ"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="cart section-bg">
+        <div class="cart__container">
+          <div class="cart__grid">
+            <div class="cart__wrapper">
+              <div class="cart__main">
+                <h1 class="cart__title">Оформить заказ</h1>
+
+                <div class="cart__note cart__note--green">
+                  <img src="@img/icons/excel.svg" alt="" loading="lazy">
+                  <span>Добавить товар или импортировать список из <a href="" class="link-underline _color-blue">excel-файла</a></span>
+                </div>
+
+                <div class="cart__items">
+                  <div class="product-item product-item_list">
+                    <div class="product-item__wrapper">
+                      <div class="product-item__row">
+                        <a href="" class="product-item__preview">
+                          <img src="@img/products/product-item1-image1.jpg" alt="" loading="lazy">
+                        </a>
+
+                        <div class="product-item__body">
+                          <a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+                          <div class="product-item__info">
+                            <div class="product-item__code">
+                              <svg class="icon">
+                                <use xlink:href="@img/icons/icons.svg#flag"></use>
+                              </svg>
+
+                              <span>код товара: 1549</span>
+                            </div>
+
+                            <div class="product-item__labels">
+                              <div class="product-item__label label label_primary1">–30%</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-item__right">
+                          <div class="product-item__price price">
+                            <div class="price__current">292 000 ₽</div>
+                            <div class="price__old">370 000 ₽</div>
+                          </div>
+
+                          <div class="product-item__footer">
+                            <div class="product-item__buy">
+                              <div class="product-item__quantity">
+                                <div class="quantity" data-quantity="">
+                                  <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus=""></button>
+                                  <div class="quantity__input">
+                                    <input data-quantity-value="" type="text" name="" value="1" class="">
+                                  </div>
+                                  <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus=""></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-item product-item_list">
+                    <div class="product-item__wrapper">
+                      <div class="product-item__row">
+                        <a href="" class="product-item__preview">
+                          <img src="@img/products/product-item1-image1.jpg" alt="" loading="lazy">
+                        </a>
+
+                        <div class="product-item__body">
+                          <a href="" class="product-item__name">Клапан запорный (вентиль) СибЗТА 15с22нж DN 20 PN40 150мм фланцевый класс A до 450гр.</a>
+
+                          <div class="product-item__info">
+                            <div class="product-item__code">
+                              <svg class="icon">
+                                <use xlink:href="@img/icons/icons.svg#flag"></use>
+                              </svg>
+
+                              <span>код товара: 1549</span>
+                            </div>
+
+                            <div class="product-item__labels">
+                              <div class="product-item__label label label_primary1">–30%</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-item__right">
+                          <div class="product-item__price price">
+                            <div class="price__current">292 000 ₽</div>
+                            <div class="price__old">370 000 ₽</div>
+                          </div>
+
+                          <div class="product-item__footer">
+                            <div class="product-item__buy">
+                              <div class="product-item__quantity">
+                                <div class="quantity" data-quantity="">
+                                  <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus=""></button>
+                                  <div class="quantity__input">
+                                    <input data-quantity-value="" type="text" name="" value="1" class="">
+                                  </div>
+                                  <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus=""></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart__note cart__note--blue">
+                  <img src="@img/icons/info.svg" alt="" loading="lazy">
+                  <span>В корзине присутствуют товары требующие предоплаты. После оформления заказа с вами свяжется менеджер для подтверждения заказа. </span>
+                </div>
+              </div>
+
+              <div class="cart__details">
+                <div class="cart__delivery cart-delivery">
+                  <h3 class="cart__caption">Доставка</h3>
+
+                  <div class="cart-delivery__items">
+                    <div class="cart-delivery__item">
+                      <div class="cart-delivery__option">
+                        <input id="cart-delivery1" hidden checked type="radio" value="Доставка" name="delivery">
+                        <label for="cart-delivery1"></label>
+                      </div>
+
+                      <div class="cart-delivery__body">
+                        <div class="cart-delivery__caption">Доставка</div>
+                        <input type="text" name="form[]" placeholder="Адрес" class="cart-delivery__input input">
+                        <div class="cart-delivery__note">*менеджер рассчитает стоимость доставки</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-delivery__item">
+                      <div class="cart-delivery__option">
+                        <input id="cart-delivery2" hidden type="radio" value="Самовывоз" name="delivery">
+                        <label for="cart-delivery2"></label>
+                      </div>
+
+                      <div class="cart-delivery__body">
+                        <div class="cart-delivery__caption">Самовывоз</div>
+                        <div class="cart-delivery__place"></div>
+                        <a class="cart-delivery__address" href="" data-popup="#pickup-points">выбрать адреса самовывоза</a>
+                        <script src="https://api-maps.yandex.ru/v3/?apikey=aad1ad30-ba10-4ea5-a43c-6c77b6113b0e&lang=ru_RU" referrerpolicy="origin"></script>
+
+
+                        <div id="pickup-points" aria-hidden="true" class="popup popup--pickup">
+                          <div class="popup__wrapper">
+                            <div class="popup__content">
+                              <button data-close type="button" class="popup__close">
+                                <button type="button" class="cart-section__close popup__close" data-close>
+                                  <svg class="icon">
+                                    <use xlink:href="img/icons/icons.svg#close"></use>
+                                  </svg>
+                                </button>
+                              </button>
+                              <div class="popup__text">
+                                <div class="pickup">
+                                  <div class="pickup__main">
+                                    <div class="pickup__caption">Пункты выдачи:</div>
+                                    <ul class="pickup__list">
+                                      <li class="pickup__item point" data-coords="50.270676, 53.198117" data-zoom="15" data-hint="Совхозный проезд, 16">
+                                        <div class="point__address">г. Самара, Совхозный проезд, д.16</div>
+
+                                        <div class="point__contacts">
+                                          <a href="mailto:12222@mail.ru" class="point__contact">
+                                            <svg class="icon">
+                                              <use xlink:href="img/icons/icons.svg#clock"></use>
+                                            </svg>
+                                            <span>12222@mail.ru</span>
+                                          </a>
+
+                                          <a href="tel:+79265384309" class="point__contact">
+                                            <svg class="icon">
+                                              <use xlink:href="img/icons/icons.svg#phone"></use>
+                                            </svg>
+                                            <span>+7 926 538-43-09</span>
+                                          </a>
+                                        </div>
+
+                                        <div class="point__schedule">Режим работы: <br> Пон-пят с 8:00 до 18:00 (без перерывов), <br> выходной суб., вск.</div>
+                                      </li>
+
+                                      <li class="pickup__item point" data-coords="50.154411, 53.210826" data-zoom="15" data-hint="ул. Ленина, 24">
+                                        <div class="point__address">г. Самара, ул. Ленина, д.24</div>
+
+                                        <div class="point__contacts">
+                                          <a href="mailto:12222@mail.ru" class="point__contact">
+                                            <svg class="icon">
+                                              <use xlink:href="img/icons/icons.svg#clock"></use>
+                                            </svg>
+                                            <span>12222@mail.ru</span>
+                                          </a>
+
+                                          <a href="tel:+79265384309" class="point__contact">
+                                            <svg class="icon">
+                                              <use xlink:href="img/icons/icons.svg#phone"></use>
+                                            </svg>
+                                            <span>+7 926 538-43-09</span>
+                                          </a>
+                                        </div>
+
+                                        <div class="point__schedule">Режим работы: <br> Пон-пят с 8:00 до 18:00 (без перерывов), <br> выходной суб., вск.</div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="pickup__map" id="pickup-map"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cart__another">
+                  <div class="cart__comments">
+                    <textarea name="form[]" placeholder="Комментарии к заказу" class="input" rows="4"></textarea>
+                  </div>
+
+                  <div class="cart__files">
+                    <div class="form__label">Выбрать файлы (xls,pdf)</div>
+
+                    <div class="upload">
+                      <div class="upload__input">
+                        <svg class="icon">
+                          <use xlink:href="img/icons/icons.svg#upload"></use>
+                        </svg>
+                        <span>Загрузить файлы</span>
+                        <input id="request-file" type="file" class="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="cart__sidebar cart-sidebar">
+              <div class="cart-sidebar__wrapper">
+                <div class="cart-sidebar__actions">
+                  <div class="cart-sidebar__share share">
+                    <button type="button" class="share__toggle">
+                      <svg class="icon">
+                        <use xlink:href="@img/icons/icons.svg#share"></use>
+                      </svg>
+                      <span>поделиться корзиной</span>
+                    </button>
+                  </div>
+                  <div class="cart-sidebar__clear">
+                    <button type="button">
+                      <svg class="icon">
+                        <use xlink:href="@img/icons/icons.svg#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cart-sidebar__main">
+                  <div class="cart-sidebar__title">Ваша корзина</div>
+
+                  <div class="cart-sidebar__value">Всего 1 товар (весом 0.154 кг)</div>
+
+                  <div class="cart-sidebar__price">
+                    <div class="cart-sidebar__discount">
+                      <div class="cart-sidebar__caption">Сумма без скидок</div>
+                      <div class="price">
+                        <div class="price__old">370 000 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-sidebar__total">
+                      <div class="cart-sidebar__caption">Сумма со скидкой</div>
+                      <div class="price">
+                        <div class="price__current">292 000 ₽</div>
+                        <div class="product-item__labels">
+                          <div class="product-item__label label label_primary1">–30%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cart-sidebar__buttons">
+                    <button type="button" class="cart-sidebar__checkout btn btn_bg-primary2">Офрмить заказ</button>
+                    <button type="button" class="cart-sidebar__fast btn" data-popup="#popup-buy">Купить в 1 клик</button>
+                  </div>
+                </div>
+
+                <div class="cart-sidebar__activities">
+                  <a href="" class="cart-sidebar__active cart-active">
+                    <div class="cart-active__caption">Распечатать</div>
+                    <div class="cart-active__icon">
+                      <img src="@img/icons/pdf-icon.svg" alt="" loading="lazy">
+                    </div>
+                  </a>
+
+                  <a href="" class="cart-sidebar__active cart-active">
+                    <div class="cart-active__caption">Сохранить в exel</div>
+                    <div class="cart-active__icon">
+                      <img src="@img/icons/excel.svg" alt="" loading="lazy">
+                    </div>
+                  </a>
+
+                  <div class="cart-sidebar__active cart-active cart-active--auth">
+                    <div class="cart-active__caption">Авторизуйтесь, <br> чтобы снизить цену</div>
+                    <div class="cart-active__button">
+                      <button class="btn btn_border-primary2">Войти</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/_useful-links.htm',{})
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

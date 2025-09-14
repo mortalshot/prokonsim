@@ -78,3 +78,41 @@ body::after {
 		visibility: visible;
 	}
 }
+
+.popup--pickup {
+	cursor: initial;
+
+	.popup__content {
+		max-width: toRem(1304);
+		border-radius: toRem(10);
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.popup__close {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		width: toRem(60);
+		height: toRem(60);
+		background-color: #ededed;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			transition: $transition ease transform 0s;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: rotate(0) !important;
+
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}
