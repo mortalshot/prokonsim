@@ -28,5 +28,9 @@ export const html = () => {
 				'file': 'config/version.json'
 			}
 		}))
+		.pipe(app.plugins.replace(
+			/(https:\/\/api-maps\.yandex\.ru\/v3\/\?[^"'<>]+?)(?:&|&amp;)?_v=\d+/g,
+			'$1'
+		))
 		.pipe(app.gulp.dest(app.path.build.html));
 }

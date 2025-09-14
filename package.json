@@ -49,6 +49,7 @@
 		"gulp-plumber": "latest",
 		"gulp-prettier": "latest",
 		"gulp-rename": "latest",
+		"gulp-replace": "^1.1.4",
 		"gulp-svg-sprite": "latest",
 		"gulp-ttf2woff2": "latest",
 		"gulp-util": "latest",
@@ -92,6 +93,7 @@
 		"isotope-layout": "^3.0.6",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"replace": "^1.2.2",
 		"simplebar": "latest"
 	}
 }

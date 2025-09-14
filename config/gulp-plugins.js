@@ -5,6 +5,7 @@ import plumber from "gulp-plumber";
 import ifPlugin from "gulp-if";
 import prettier from "gulp-prettier";
 import rename from 'gulp-rename';
+import replace from "gulp-replace";
 
 // Экспортируем объект
 export const plugins = {
@@ -13,5 +14,6 @@ export const plugins = {
 	prettier,
 	newer,
 	plumber,
-	rename
+	rename,
+	replace
 }
