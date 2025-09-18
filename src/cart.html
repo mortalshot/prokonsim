@@ -6,7 +6,79 @@
 
 <body>
   <div class="wrapper">
-    @@include('html/_header.htm',{})
+    <header class="cart-header">
+      <div class="cart-header__container">
+        <div class="cart-header__logo logo">
+          <a href="home.html" class="logo__link">
+            <img src="@img/logo.svg" alt="" loading="lazy">
+          </a>
+        </div>
+
+        <div class="cart-header__contacts header-contacts">
+          <div class="header-contacts__item">
+            <div class="header-contacts__main">
+              <div class="header-contacts__icon">
+                <svg class="icon">
+                  <use xlink:href="@img/icons/icons.svg#phone"></use>
+                </svg>
+              </div>
+
+              <div class="header-contacts__contact">
+                <a href="tel:+78003338658" class="header-contacts__value">+7 (800) 333-86-58</a>
+                <div class="header-contacts__label">телефоны для связи</div>
+              </div>
+
+              <button type="button" class="header-contacts__more">
+                <svg class="icon">
+                  <use xlink:href="@img/icons/icons.svg#chevron"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="header-contacts__popup">
+              <div class="header-contacts__socials">
+                <a href="" class="shake-animation">
+                  <img src="@img/icons/tg.svg" alt="" loading="lazy">
+                </a>
+                <a href="" class="shake-animation">
+                  <img src="@img/icons/whatsapp.svg" alt="" loading="lazy">
+                </a>
+              </div>
+
+              <div class="header-contacts__contact">
+                <div class="header-contacts__label">Отдел продаж (Пн-Пт):</div>
+                <div class="header-contacts__value">9:00 - 20:00</div>
+              </div>
+
+              <div class="header-contacts__contact">
+                <div class="header-contacts__label">Склад (Пн-Пт):</div>
+                <div class="header-contacts__value">10:00 - 18:00</div>
+              </div>
+
+              <div class="header-contacts__contact">
+                <div class="header-contacts__label">Адрес:</div>
+                <div class="header-contacts__value">117420, г. Москва, ул. Авиамоторная, д. 10, корп. 2</div>
+              </div>
+
+              <div class="header-contacts__contact">
+                <div class="header-contacts__label">Email:</div>
+                <a href="mailto:info@proconsim-nsk.ru" class="header-contacts__value">info@proconsim-nsk.ru</a>
+              </div>
+
+              <div class="header-contacts__contact">
+                <div class="header-contacts__label">Телефон:</div>
+                <a href="tel:+73833630262" class="header-contacts__value">+7 (383) 363-02-62</a>
+              </div>
+
+              <div class="header-contacts__request">
+                <a href="" class="btn btn_bg-primary2">Заказать обратный звонок</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main class="page">
       <section class="cart section-bg">
         <div class="cart__container">
@@ -324,6 +396,21 @@
                 </div>
               </div>
             </aside>
+          </div>
+
+          <div class="cart-total">
+            <div class="cart-total__value">Ваш заказ - 8 позиций</div>
+            <div class="cart-total__price">
+              <span>Итого</span>
+
+              <div class="price">
+                <div class="price__current">292 000 ₽</div>
+              </div>
+            </div>
+            <div class="cart-sidebar__buttons">
+              <button type="button" class="cart-sidebar__fast btn" data-popup="#popup-buy">Купить в 1 клик</button>
+              <button type="button" class="cart-sidebar__checkout btn btn_bg-primary2">Офрмить заказ</button>
+            </div>
           </div>
         </div>
       </section>

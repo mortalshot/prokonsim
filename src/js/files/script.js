@@ -174,7 +174,9 @@ const headerBottomRow = document.querySelector('.header-bottom__row');
 function calcHeaderLeftIndent(headerBottomRow) {
   const headerBottomRowRect = headerBottomRow.getBoundingClientRect();
   const pixelsFromLeft = headerBottomRowRect.left;
-  document.querySelector('.header-catalog__wrapper').style.setProperty('--distance-header-to-left', pixelsFromLeft + 'px');
+  if (document.querySelector('.header-catalog__wrapper')) {
+    document.querySelector('.header-catalog__wrapper').style.setProperty('--distance-header-to-left', pixelsFromLeft + 'px');
+  }
 }
 if (headerBottomRow) {
   document.addEventListener('DOMContentLoaded', calcHeaderLeftIndent(headerBottomRow))
@@ -444,3 +446,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Показываем на мобилках cart-total
+(function () {
+  const cartTotal = document.querySelector('.cart-total');
+  const sidebarMain = document.querySelector('.cart-sidebar__main');
+
+  if (!cartTotal || !sidebarMain) return;
+
+  function toggleCartTotal() {
+    if (window.innerWidth >= 1024) {
+      cartTotal.classList.remove('_active', 'cart-total--top');
+      return;
+    }
+
+    const sidebarRect = sidebarMain.getBoundingClientRect();
+    const middleY = window.innerHeight / 2;
+
+    // состояние 4: блок полностью ушёл вверх
+    if (sidebarRect.bottom <= 0) {
+      cartTotal.classList.add('_active', 'cart-total--top');
+    }
+    // состояние 3: блок виден, но середина экрана уже прошла его верх
+    else if (sidebarRect.top <= middleY && sidebarRect.bottom > 0) {
+      cartTotal.classList.add('cart-total--top');
+      cartTotal.classList.remove('_active');
+    }
+    // состояние 2: блок в нижней части экрана (мы только начали входить в него)
+    else if (sidebarRect.top < window.innerHeight && sidebarRect.top > middleY) {
+      cartTotal.classList.remove('_active', 'cart-total--top');
+    }
+    // состояние 1: ещё не дошли до блока
+    else {
+      cartTotal.classList.add('_active');
+      cartTotal.classList.remove('cart-total--top');
+    }
+  }
+
+  window.addEventListener('scroll', toggleCartTotal, { passive: true });
+  window.addEventListener('resize', toggleCartTotal);
+  document.addEventListener('DOMContentLoaded', toggleCartTotal);
+
+  toggleCartTotal();
+})();

@@ -10957,7 +10957,7 @@ PERFORMANCE OF THIS SOFTWARE.
         function calcHeaderLeftIndent(headerBottomRow) {
             const headerBottomRowRect = headerBottomRow.getBoundingClientRect();
             const pixelsFromLeft = headerBottomRowRect.left;
-            document.querySelector(".header-catalog__wrapper").style.setProperty("--distance-header-to-left", pixelsFromLeft + "px");
+            if (document.querySelector(".header-catalog__wrapper")) document.querySelector(".header-catalog__wrapper").style.setProperty("--distance-header-to-left", pixelsFromLeft + "px");
         }
         if (headerBottomRow) {
             document.addEventListener("DOMContentLoaded", calcHeaderLeftIndent(headerBottomRow));
@@ -11145,6 +11145,32 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }));
+        (function() {
+            const cartTotal = document.querySelector(".cart-total");
+            const sidebarMain = document.querySelector(".cart-sidebar__main");
+            if (!cartTotal || !sidebarMain) return;
+            function toggleCartTotal() {
+                if (window.innerWidth >= 1024) {
+                    cartTotal.classList.remove("_active", "cart-total--top");
+                    return;
+                }
+                const sidebarRect = sidebarMain.getBoundingClientRect();
+                const middleY = window.innerHeight / 2;
+                if (sidebarRect.bottom <= 0) cartTotal.classList.add("_active", "cart-total--top"); else if (sidebarRect.top <= middleY && sidebarRect.bottom > 0) {
+                    cartTotal.classList.add("cart-total--top");
+                    cartTotal.classList.remove("_active");
+                } else if (sidebarRect.top < window.innerHeight && sidebarRect.top > middleY) cartTotal.classList.remove("_active", "cart-total--top"); else {
+                    cartTotal.classList.add("_active");
+                    cartTotal.classList.remove("cart-total--top");
+                }
+            }
+            window.addEventListener("scroll", toggleCartTotal, {
+                passive: true
+            });
+            window.addEventListener("resize", toggleCartTotal);
+            document.addEventListener("DOMContentLoaded", toggleCartTotal);
+            toggleCartTotal();
+        })();
         window["FLS"] = true;
         addLoadedClass();
         menuInit();
